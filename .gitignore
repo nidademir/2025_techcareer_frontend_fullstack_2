@@ -7,4 +7,4 @@ winston_error.log
 
 
 # Mongo DB
-# .env
+.env
