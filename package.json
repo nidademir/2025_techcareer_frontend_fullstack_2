@@ -1,0 +1,70 @@
+{
+  "name": "offline_node_blog",
+  "version": "1.0.0",
+  "description": "Html5,css3,bootstrap5, js, es, nodejs, jquery, express,nodemon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node  ./dist/server.js",
+    "server:start": "lite-server",
+    "build_watch": "tsc -w --pretty",
+    "nodemon_app_watch": "nodemon --watch src --watch dist ./dist/server.js",
+    "dev:setup": "npm install && tsc && concurrently -k \"tsc -w --pretty\" \"nodemon ./dist/server.js\"",
+    "dev:start": "tsc && concurrently -k \"tsc -w --pretty\" \"nodemon ./dist/server.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nidademir/2025_techcareer_frontend_fullstack_2.git"
+  },
+  "keywords": [
+    "Html5",
+    "css3",
+    "bootstrap5",
+    "js",
+    "es",
+    "ejs",
+    "nodejs",
+    "nodemon",
+    "jquery",
+    "express"
+  ],
+  "author": "Nida Demir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nidademir/2025_techcareer_frontend_fullstack_2/issues"
+  },
+  "homepage": "https://github.com/nidademir/2025_techcareer_frontend_fullstack_2#readme",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "compression": "^1.8.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "csurf": "^1.10.0",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "jquery": "^3.7.1",
+    "mongodb": "^6.14.1",
+    "mongoose": "^8.11.0",
+    "morgan": "^1.10.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.8",
+    "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.7",
+    "eslint": "^9.21.0",
+    "eslint-config-prettier": "^10.0.2",
+    "eslint-plugin-prettier": "^5.2.3",
+    "lite-server": "^2.6.1",
+    "nodemon": "^3.1.9",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.5.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
+}
