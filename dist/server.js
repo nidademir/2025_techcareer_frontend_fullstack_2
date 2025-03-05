@@ -28,24 +28,32 @@ const PORT = process.env.LOCALHOST_PORT || 1111;
 
 // EJS Template Engine Kullanımı
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(__dirname, "../views"));
 
 // Static Dosyalar (CSS,JS)
 //app.use(express.static(path.join(__dirname, "public")));
-app.use(express.static("public"));
+//app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "../public")));
+// Middleware ile CSRF Token oluşturma
+app.use((request, response, next) => {
+    response.locals.csrfToken = "test_csrf_token_static";
+    //response.locals.csrfToken = request.csrfToken();
+    next();
+});
 
 // Anasayfa (httpİ://localhost:1111/)
-app.get("/", (request, response) => {
-}); // End of app.get
+app.get("/", (request, response) => { }); // End of app.get
 
 // Define a route handler for the GET / route
 app.get("/blog", (request, response) => {
-    
+
     // blog.ejs
     // response.send("blog");
-    response.render("blog", { message: "Bu blog sayfasııdır" });
-}); // End of app.get
-
+    //response.render("blog", { message: "Bu blog sayfasııdır" });
+    // CSRF Token EJS'e Gönderiyor
+    response.render("blog", { csrfToken: response.locals.csrfToken });
+    //response.render("blog", { message: "Bu blog sayfasıdır" });
+    
 // Sunucu start
 app.listen(PORT, () => {
     console.log(`Server is listening on port http://localhost:${PORT}`);
