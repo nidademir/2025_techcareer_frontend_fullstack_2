@@ -2,6 +2,10 @@
 [Github Linki](https://github.com/nidademir/2025_techcareer_frontend_fullstack_2)
 ---
 
+----
+npm run dev:start
+----
+
 [Html5 Tutorials](https://www.w3schools.com/html/)
 [Css3 Tutorials](https://www.w3schools.com/css/default.asp)
 [JS Tutorials](https://www.w3schools.com/js/default.asp)
