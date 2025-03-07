@@ -1,8 +1,8 @@
 {
-  "name": "offline_node_blog",
+  "name": "2025_techcareer_frontend_fullstack_2",
   "version": "1.0.0",
-  "description": "Html5,css3,bootstrap5, js, es, nodejs, jquery, express,nodemon",
-  "main": "index.js",
+  "description":"[Github Linki](https://github.com/nidademir/2025_techcareer_frontend_fullstack_2.git)",
+  "main": "./dist/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node  ./dist/server.js",
