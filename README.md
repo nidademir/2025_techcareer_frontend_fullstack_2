@@ -1,20 +1,28 @@
-# Techcareer Node.js 
+# Techcareer Node.js(Express) Html5,Css3,Bootstrap5,TS,EJS,+ES5,Mongo 
 [Github Linki](https://github.com/nidademir/2025_techcareer_frontend_fullstack_2)
 ---
 
-----
-npm run dev:start
-----
+## git clone 
+https://github.com/hamitmizrak/2025_techcareer_frontend_fullstack_2
 
+----
+### Npm Start
+> npm run dev:start
+> json-server --watch db.json --port 3000
+> ----
+
+## Tutorials Link
 [Html5 Tutorials](https://www.w3schools.com/html/)
 [Css3 Tutorials](https://www.w3schools.com/css/default.asp)
 [JS Tutorials](https://www.w3schools.com/js/default.asp)
 [JQuery Tutorials](https://www.w3schools.com/jquery/default.asp)
 [TS Tutorials](https://www.w3schools.com/typescript/index.php)
 [GIT Tutorials](https://www.w3schools.com/git/default.asp)
-
 [Emmet IO](https://docs.emmet.io/cheat-sheet/)
 ---
+
+## Setup Link
+
 [Mongo Database Cloud](https://www.mongodb.com/products/platform/cloud)
 [Mongo Database Download](https://www.mongodb.com/try/download/community)
 [Font Awesome](https://fontawesome.com/search?ic=free)
@@ -36,6 +44,7 @@ npm run dev:start
 ---
 
 ## Script run (Typescript başlat)
+
 ```sh
  docker container run -d --name mongodb-container  -p 27000:27017 \
              -e MONGO_INITDB_ROOT_USERNAME=root \
@@ -55,17 +64,27 @@ UNUTMA: Mongodb localhost veya docker mongodb veya cloud mongo açık olması ge
 ---
 
 ## Version
+
 ```sh
-code .
 git -v
 node -v
 npm -v
 tsc --version
 mongosh --version
+mongo --version
 ```
 ---
 
+## VS CODE RUNNING
+
+```sh
+code .
+```
+
+---
+
 ## Git
+
 ```sh
 git init
 git add .
@@ -103,20 +122,23 @@ Prettier ESLint            => Rebecca Vest
 Rainbow Brackets           => MHammed Talhaouy
 
 ## Docker
+
 ```sh
 Turn Windows features on or off => Hyper-V, Virtual Machine Paltform, Windows Hypervisor, Windows Subsystem for Linux
 Microsoft Store => Search => wsl2 => Ubuntu 22.04.5 LTS kuralım.
-Dikkat: Eğer Ubuntu 22.04.5 kuramazsanız, Turn Windows features bilgileri kapat sonra tekrar aç ve bilgisayarın restart 
+Dikkat: Eğer Ubuntu 22.04.5 kuramazsanız, Turn Windows features bilgileri kapat sonra tekrar aç ve bilgisayarın restart
 ```
 ---
 
 ## Mongo Localhost
+
 ```sh
 port:27017
 ```
 ---
 
 ## Teknoloji İsimleri
+
 ```sh
 HTML5
 CSS3
@@ -136,6 +158,7 @@ CI/CD
 ---
 
 ## Teknoloji İçerikleri
+
 ```sh
 nodemon
 mongoose
@@ -158,7 +181,7 @@ winston
 ```
 ---
 
-## VSCode (settings.json)
+## VSCode (settings.json) Version-1
 ```sh
 {
     "workbench.colorTheme": "Default Dark+",
@@ -186,17 +209,88 @@ winston
 ```
 ---
 
-## NPM
+
+## VSCode (settings.json) Version-2
+
 ```sh
-npm init
+ "workbench.colorTheme": "Default Dark+",
+  "editor.mouseWheelZoom": true,
+  "editor.fontSize": 16,
+  "explorer.confirmDragAndDrop": false,
+  "git.enableSmartCommit": true,
+  "explorer.confirmDelete": false,
+  "git.confirmSync": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "files.autoSave": "afterDelay",
+  "editor.cursorStyle": "line-thin",
+  "terminal.integrated.mouseWheelZoom": true,
+
+  ////////////////////////////////////////////////////
+  // Emmet genişletmesini "Tab" tuşu ile etkinleştirir
+  "emmet.triggerExpansionOnTab": true,
+
+  // HTML ve CSS için otomatik kapanan etiketleri tamamlar
+  "emmet.syntaxProfiles": {
+    "html": {
+      "self_closing_tag": "xhtml"
+    }
+  },
+
+  // Boş öğelerde otomatik olarak boşluk bırakır
+  "emmet.preferences": {
+    "format.forceIndentationForEmmet": true,
+    //"format.noIndentTags": "html, body, head",
+    "format.selfClosingStyle": "xhtml" // <br />, <img />, vb.
+  },
+
+  // CSS için kısa yazımları destekler
+  "emmet.showAbbreviationSuggestions": true,
+
+  // HTML etiketleri için otomatik tamamlama önerileri verir
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+
+  // HTML genişletmelerinde satır sonu otomatik ekler
+  "emmet.variables": {
+    "lang": "en",
+    "charset": "UTF-8"
+  },
+
+  // Emmet ile genişletilmiş HTML kodlarını biçimlendirir
+  "editor.formatOnPaste": true,
+  // JSX / React gibi ortamlarda Emmet’in çalışmasını sağlar
+  "emmet.includeLanguages": {
+    "javascript": "html",
+    "javascriptreact": "html",
+    "typescriptreact": "html",
+     //"javascript": "javascriptreact",
+     "typescript": "typescriptreact"
+  },
+```
+
+---
+
+
+
+
+## NPM (Node Package Management)
+
+```sh
+npm init     (Package.json)
 npm init -y
 
 npm root
 npm root -g
+npm root     (Local: Proje üzerinde yüklenen Scriptlerin node_modules)
+npm root -g  (Glocal: Proje üzerinde yüklenen Scriptlerin node_modules)
 ```
 ---
 
 ## NPM INIT
+
 ```sh
 npm init
 package name:
@@ -215,9 +309,11 @@ author: Nida Demir
 license: ISC
 Is this OK? yes
 ```
+
 ---
 
 ## NPM INIT -Y
+
 ```sh
 npm init -y
 Default
@@ -234,9 +330,11 @@ Default
   "license": "ISC"
 }
 ```
+
 ---
 
 ## package.json(Son Hali)
+
 ```sh
 {
   "name": "2025_techcareer_frontend_fullstack_2",
@@ -250,10 +348,11 @@ Default
     "build_watch": "tsc -w --pretty",
     "nodemon_app_watch": "nodemon --watch src --watch dist ./dist/server.js",
     "dev:setup": "npm install && tsc && concurrently -k \"tsc -w --pretty\" \"nodemon ./dist/server.js\"",
-    "dev:start": "tsc && concurrently -k \"tsc -w --pretty\" \"nodemon ./dist/server.js\""
+        "dev:start": "tsc && concurrently -k \"tsc -w --pretty\" \"nodemon ./dist/server.js\"",
+    "dev:babel:start": ""
   },
   "keywords": [
-    "Html5, Css3, Js, NodeJS, ES5+,TS, Bootstrap5, EJS"
+     "Html5, Css3, Js, NodeJS, Express JS, ES5+,TS, Bootstrap5, EJS, jQuery"
   ],
   "author": "MSc Computer Enginner Hamit Mızrak",
   "license": "ISC",
@@ -283,6 +382,7 @@ Default
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.3",
     "lite-server": "^2.6.1",
+    "live-server": "^1.2.2",
     "nodemon": "^3.1.9",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.4.2",
@@ -293,8 +393,10 @@ Default
 ```
 ---
 
-## npm delete
+## npm node_modules delete
+> NOT: Bu ayarı eğer kütüphaneleriniz çalışma yapınız. Öneceliğiniz "npm i" olmalıdır.
 ```sh
+ls -lar
 rm -rf node_modules
 ls -al
 npm install
@@ -302,6 +404,7 @@ npm install
 ---
 
 ## NPM Sıklıkla Kullanılan Komutlar-1
+
 ```sh
 npm search  express
 npm install express
@@ -324,6 +427,7 @@ npm uninstall express@4.16.1
 ---
 
 ## NPM Sıklıkla Kullanılan Komutlar-2
+
 ```sh
 npm list
 npm ls
@@ -337,6 +441,7 @@ Global node_modules: C:\Users\nidad\AppData\Roaming\npm\node_modules
 ---
 
 ## NPM Sıklıkla Kullanılan Komutlar-3
+
 ```sh
 npm update              # package.json içindeki dosyalardaki paketleri günceller
 npm outdated            # Projede eskiyen veya güncellenmesi gereken paketleride gösterir
@@ -360,6 +465,7 @@ npm publish              # ilgili pkaeti npm gönder
 ---
 
 ## Npm Package Install (Local --save)
+
 ```sh
 npm list
 npm root
@@ -369,10 +475,14 @@ npm root -g
 # https://www.npmjs.com/
 npm list
 npm i body-parser compression cookie-parser cors csurf  ejs  express express-rate-limit helmet mongodb mongoose morgan  swagger-jsdoc swagger-ui-express  winston --save
+
+npm install --save json-server
+
 ```
 ---
 
 ## Npm Package Install (Local --save-dev)
+
 ```sh
 npm list
 npm root
@@ -394,6 +504,7 @@ npm list
 ---
 
 ## Npm Package Install (Global)
+
 ```sh
 npm list
 npm root
@@ -408,6 +519,7 @@ npm list -g
 ---
 
 ## Typescript kurulum
+
 ```sh
 npm install typescript -g          # global
 npm install typescript --save-dev  # local 
@@ -423,6 +535,7 @@ tsc -w (Sistem kendi compiler yapıyor yazdıklarımı kendi ekliyor.)
 ---
 
 ## Typescript (tsconfig.json )
+
 ```sh
 /* Bu dosya hakkında daha fazla bilgi için https://aka.ms/tsconfig sayfasını ziyaret edin */
 {
@@ -442,15 +555,55 @@ tsc -w (Sistem kendi compiler yapıyor yazdıklarımı kendi ekliyor.)
 ```
 ---
 
+## Typescript (tsconfig.json )
+
+```sh
+// Aşağıda TypeScript yapılandırma dosyanız (`tsconfig.json`) içindeki tüm seçenekleri ayrıntılı açıklamalar
+// Bu yapılandırma dosyası, TypeScript projelerinde genellikle güvenilir bir başlangıç noktasıdır. Eğer daha özel ihtiyaçlarınız varsa, ek ayarlamalar yapılabilir.
+{
+  "compilerOptions": {
+    // Derlenecek JavaScript sürümünü belirler. ES6 olarak ayarlandı.
+  "target": "ES6",
+  // Modül sistemini belirler. CommonJS olarak ayarlandı. (Node.js projeleri için yaygın kullanılır.)
+    "module": "commonjs",
+    // Kaynak dosyaların bulunduğu dizini belirtir. (TypeScript kaynak kodları burada olacak.)
+    "rootDir": "./src",
+
+    // Derlenmiş JavaScript dosyalarının çıkış dizinini belirtir. (Derleme sonucu buraya yazılacak.)
+    "outDir": "./dist",
+
+    // TypeScript'in daha sıkı tip kontrolleri yapmasını sağlar. (Önerilir.)
+    "strict": true,
+
+    // ES modülleri ile CommonJS modüllerinin birlikte çalışmasını sağlar. (Önemli: import/export kullanımını kolaylaştırır.)
+    "esModuleInterop": true,
+
+    // Kütüphane dosyalarının kontrol edilmesini atlar. (Derleme süresini hızlandırır.)
+    "skipLibCheck": true,
+
+    // Dosya isimlerinin büyük/küçük harf tutarlılığını zorunlu kılar. (Önerilir: Farklı işletim sistemlerinde hata önler.)
+    "forceConsistentCasingInFileNames": true
+  },
+
+    // Proje içine dahil edilecek dosya ve klasörleri belirler. Burada `src` klasörü içindeki tüm dosyalar derlenecek.
+  "include": ["src/**/*"],
+
+  // Derleme dışında tutulacak dosya ve klasörleri belirler. `node_modules` hariç tutulmuş.
+  "exclude": ["node_modules"]
+}
+
 ## script => package.json typescript
+
 ```sh
   "scripts": {
     "build_watch": "tsc -w --pretty",
   },
 ```
+
 ---
 
 ## Nodemon kurulum
+
 ```sh
 npm install  nodemon -g
 npm install  nodemon -D
@@ -459,6 +612,7 @@ npm install  nodemon --save-dev
 ---
 
 ## nodemon.json (Nodemon.json)
+
 ```sh
 {
   "watch": ["src", "dist"],
@@ -469,6 +623,7 @@ npm install  nodemon --save-dev
 ---
 
 ## script => package.json nodemon-1
+
 ```sh
   "scripts": {
      "test": "echo \"Error: no test specified\" && exit 1",
@@ -477,6 +632,7 @@ npm install  nodemon --save-dev
 ---
 
 ## package.json içinden Script yazmak-2
+
 ```sh
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -491,6 +647,7 @@ npm install  nodemon --save-dev
 ---
 
 ## package.json içinden Script yazmak-3
+
 ```sh
   "scripts": {
     "start_app": "ts-node src/app.ts",
@@ -512,6 +669,486 @@ npm install  nodemon --save-dev
   }
 ```
 ---
+
+## Json-Server
+
+```sh
+
+```
+
+---
+
+## **JSON-Server Nedir?**
+
+### **📌 JSON-Server, hızlı ve kolay bir şekilde REST API oluşturmaya yarayan, Node.js tabanlı bir geliştirme aracıdır.**
+
+- JSON verilerini kullanarak **gerçek bir API** gibi çalışan sahte (mock) bir RESTful servis oluşturur.
+- **Backend geliştirme olmadan** veritabanı gibi kullanılabilir.
+- **Frontend geliştiricileri**, hızlı API erişimi ve CRUD işlemleri (Create, Read, Update, Delete) için kullanabilir.
+- **Test ortamı, prototipleme ve hızlı geliştirme süreçlerinde** oldukça faydalıdır.
+
+---
+
+## **🚀 JSON-Server Neden Kullanılır?**
+
+1. **Hızlı ve Kolay API Oluşturma**
+
+   - JSON formatında bir dosya hazırlandığında, **JSON-Server** bunu **bir RESTful API** olarak çalıştırabilir.
+   - Birkaç satır kod ile çalışan bir backend oluşturabilirsiniz.
+
+2. **Backend Gerektirmeden API Kullanımı**
+
+   - Backend kodu yazmadan sahte bir API'yi çalıştırarak **frontend geliştirme sürecini hızlandırır**.
+   - Özellikle **React, Angular, Vue gibi** frontend teknolojileriyle çalışırken veri almak için ideal bir çözümdür.
+
+3. **CRUD (Create, Read, Update, Delete) İşlemlerini Destekler**
+
+   - **POST** → Veri ekleme
+   - **GET** → Veri çekme
+   - **PUT / PATCH** → Veri güncelleme
+   - **DELETE** → Veri silme
+  - Bu işlemleri **hiçbir backend kodu yazmadan** gerçekleştirebilirsiniz.
+
+4. **Gerçek API Davranışı**
+
+   - Gerçek bir API gibi çalışarak **HTTP istekleriyle veri ekleyip, güncelleyebilirsiniz**.
+   - **Query parametreleri, filtreleme ve sayfalama destekler**.
+
+5. **Prototipleme ve Test Ortamı**
+   - Büyük projelerde **backend tamamlanmadan frontend geliştiricilerinin** API’yi test etmesine olanak tanır.
+   - **Mobil uygulamalar için de veri kaynağı olarak kullanılabilir**.
+
+## **📌 JSON-Server Nasıl Kurulur?**
+
+### **🔹 1. JSON-Server'ı Global Olarak Yükleme**
+
+```sh
+npm install -g json-server
+```
+
+- `-g` parametresi ile **global olarak** yüklenir.
+- Artık her yerden `json-server` komutunu kullanabilirsiniz.
+
+---
+
+### **🔹 2. JSON Dosyası Oluşturma**
+
+Kök dizinde **`db.json`** adında bir dosya oluşturun ve içine şu veriyi ekleyin:
+
+```json
+{
+  "posts": [
+     { "id": 1, "title": "JSON Server", "content": "Kolay REST API" },
+    { "id": 2, "title": "Node.js", "content": "JavaScript ile backend" }
+  ],
+  "users": [
+    { "id": 1, "name": "Ahmet" },
+    { "id": 2, "name": "Mehmet" }
+  ]
+}
+```
+
+- Bu dosya, JSON-Server tarafından bir **veritabanı gibi** kullanılacaktır.
+
+---
+
+### **🔹 3. JSON-Server'ı Çalıştırma**
+
+```sh
+json-server --watch db.json --port 3000
+```
+
+- `--watch db.json` → **JSON dosyasını izle, değişiklikleri algıla**
+- `--port 3000` → **API 3000 portunda çalışsın**
+---
+
+## **🌍 JSON-Server Kullanımı (API Uç Noktaları)**
+
+### **1️⃣ Tüm Postları Getir (GET)**
+
+```sh
+GET http://localhost:3000/posts
+```
+
+**Cevap:**
+
+```json
+[
+  { "id": 1, "title": "JSON Server", "content": "Kolay REST API" },
+    { "id": 2, "title": "Node.js", "content": "JavaScript ile backend" }
+]
+```
+
+---
+
+### **2️⃣ Tek Bir Postu Getir (GET)**
+
+```sh
+GET http://localhost:3000/posts/1
+```
+
+**Cevap:**
+
+```json
+{ "id": 1, "title": "JSON Server", "content": "Kolay REST API" }
+```
+
+---
+
+### **3️⃣ Yeni Post Ekle (POST)**
+
+```sh
+POST http://localhost:3000/posts
+Content-Type: application/json
+```
+
+**Body:**
+
+```json
+{ "title": "Yeni Yazı", "content": "JSON-Server harika!" }
+```
+
+**Cevap:**
+
+```json
+{ "id": 3, "title": "Yeni Yazı", "content": "JSON-Server harika!" }
+```
+
+---
+
+### **4️⃣ Bir Postu Güncelle (PUT / PATCH)**
+
+#### **Tüm Veriyi Güncelle (PUT)**
+
+```sh
+PUT http://localhost:3000/posts/1
+Content-Type: application/json
+```
+
+**Body:**
+
+```json
+{ "id": 1, "title": "JSON Server Güncellendi", "content": "Yeni içerik" }
+```
+
+#### **Kısmi Güncelleme (PATCH)**
+
+```sh
+PATCH http://localhost:3000/posts/1
+Content-Type: application/json
+```
+
+**Body:**
+
+```json
+{ "title": "Başlık Güncellendi" }
+```
+
+---
+
+### **5️⃣ Bir Postu Sil (DELETE)**
+
+```sh
+DELETE http://localhost:3000/posts/1
+```
+
+**Cevap:**  
+`204 No Content` (Silme işlemi başarılı)
+
+---
+
+## **📌 JSON-Server Gelişmiş Özellikler**
+
+### **🔹 1. Query Parametreleri ile Filtreleme**
+
+- **Belirli bir kullanıcıyı bulma**
+
+```sh
+GET http://localhost:3000/users?name=Ahmet
+```
+
+- **Başlığı "JSON Server" olan postları getirme**
+
+```sh
+GET http://localhost:3000/posts?title=JSON Server
+```
+
+---
+
+### **🔹 2. Sayfalama (Pagination)**
+
+- **İlk 2 postu getir**
+
+```sh
+GET http://localhost:3000/posts?_limit=2
+```
+
+- **Sayfa 2’deki verileri getir**
+
+```sh
+GET http://localhost:3000/posts?_page=2
+```
+
+---
+
+### **🔹 3. Sıralama (Sorting)**
+
+- **Başlığa göre sıralama (A-Z)**
+
+```sh
+GET http://localhost:3000/posts?_sort=title&_order=asc
+```
+
+- **Başlığa göre ters sıralama (Z-A)**
+
+```sh
+GET http://localhost:3000/posts?_sort=title&_order=desc
+```
+
+---
+
+### **🔹 4. JSON-Server'ı Express ile Kullanma**
+
+JSON-Server’ı **Express.js ile birleştirerek** özelleştirebilirsiniz:
+
+📌 **`server.js`**
+
+```javascript
+const jsonServer = require("json-server");
+const server = jsonServer.create();
+const router = jsonServer.router("db.json");
+const middlewares = jsonServer.defaults();
+
+server.use(middlewares);
+server.use(router);
+
+server.listen(4000, () => {
+  console.log("JSON Server 4000 portunda çalışıyor...");
+});
+```
+
+Bu şekilde, **JSON-Server'ı port 4000 üzerinde çalıştırabilirsiniz.**
+
+---
+
+## **📌 JSON-Server’ın Kullanım Alanları**
+
+1️⃣ **Frontend Geliştiricileri için API Simülasyonu**  
+2️⃣ **Mobil Uygulama Geliştirme (Mock API Kullanımı)**  
+3️⃣ **Hızlı Prototipleme ve Test Ortamı Kurma**  
+
+4️⃣ **Veri Görselleştirme ve Analiz Amaçlı Geçici API Kurma**  
+5️⃣ **Yapay Zeka ve Makine Öğrenimi İçin Test Verisi Sağlama**
+
+---
+
+## **📌 SONUÇ**
+
+✅ JSON-Server, **hızlı, kolay ve konfigürasyonsuz bir şekilde sahte API oluşturmak için mükemmel bir araçtır**.  
+✅ **Backend yazmadan** API çağrıları yapabilir, CRUD işlemleri gerçekleştirebilir, filtreleme ve sıralama gibi gelişmiş özellikleri kullanabilirsiniz.  
+✅ **Frontend geliştiricileri, mobil uygulama geliştiricileri ve test mühendisleri** için **ideal bir çözümdür**. 🚀
+
+## Babel
+
+```sh
+
+```
+
+---
+
+# **BABEL NEDİR?**
+
+## **📌 Babel, JavaScript kodlarını eski tarayıcılarla uyumlu hale getiren bir JavaScript derleyicisidir.**
+
+- Modern JavaScript (ES6, ES7, ES8 ve sonrası) kodlarını, **ES5 gibi daha eski versiyonlara çevirerek** tüm tarayıcıların desteklemesini sağlar.
+- **ES6+ (ECMAScript 2015 ve sonrası) kodlarını, ES5’e** veya daha önceki JavaScript sürümlerine dönüştürür.
+- **React, TypeScript ve diğer modern JavaScript teknolojileriyle** uyumludur.
+@@ -820,62 +1013,78 @@
+---
+
+# **📌 BABEL NEDEN KULLANILIR?**
+
+Babel, aşağıdaki nedenlerle kullanılır:
+
+### **1️⃣ Tarayıcı Uyumluluğu Sağlar**
+
+- Tarayıcılar farklı JavaScript sürümlerini destekler.
+- Örneğin, **Internet Explorer (IE) ES6 özelliklerini desteklemez**.
+- Eğer modern **ES6/ES7 kodları** yazıyorsanız, eski tarayıcılar bunları çalıştıramaz.
+- **Babel, kodu ES5’e çevirerek tüm tarayıcılarda çalışmasını sağlar.**
+
+### **2️⃣ Modern JavaScript Özelliklerini Kullanmayı Sağlar**
+
+- ES6 ve üstü, birçok yeni özellik içerir (**arrow functions, let/const, class, async/await, optional chaining** vb.).
+- Ancak, bu özelliklerin tüm tarayıcılar tarafından desteklenmesi **yıllar sürebilir**.
+- **Babel sayesinde bu özellikleri rahatça kullanabiliriz.**
+
+### **3️⃣ React ve JSX Desteği Sağlar**
+
+- React, **JSX (JavaScript XML)** kullanır.
+- Tarayıcılar JSX’i anlayamaz, çünkü normal JavaScript değildir.
+- Babel, JSX kodlarını **standart JavaScript’e** dönüştürerek çalıştırır.
+
+Örnek JSX kodu:
+
+```jsx
+const App = () => {
+  return <h1>Merhaba Dünya!</h1>;
+};
+```
+
+Babel bunu şu şekilde **JavaScript’e çevirir**:
+
+```js
+const App = function () {
+  return React.createElement("h1", null, "Merhaba Dünya!");
+};
+```
+
+### **4️⃣ ES Modules (`import/export`) Desteği Sağlar**
+
+- Modern JavaScript’te **import/export modülleri** kullanılabilir:
+
+```js
+import sayHello from "./utils.js";
+sayHello();
+```
+
+- **Ancak eski tarayıcılarda `import/export` çalışmaz.**
+- Babel, **bu kodu `require()` formatına** çevirerek destekler.
+
+### **5️⃣ TypeScript, Vue, Angular, React ile Kullanılabilir**
+
+- **TypeScript veya JSX kullanıyorsanız**, tarayıcılar doğrudan bu dosyaları çalıştıramaz.
+- Babel, **bu dilleri JavaScript’e çevirerek** tarayıcıda çalışmasını sağlar.
+
+---
+
+# **📌 BABEL NASIL ÇALIŞIR?**
+
+Babel, **üç aşamada çalışan** bir **JavaScript derleyicisidir**.
+
+### **1️⃣ Parsing (Ayrıştırma)**
+
+- JavaScript kodunu **Abstract Syntax Tree (AST)** adlı bir veri yapısına çevirir.
+- Örneğin, şu kod:
+
+```js
+const x = 10;
+```
+
+- AST’ye şu şekilde çevrilir:
+
+```json
+{
+  "type": "VariableDeclaration",
+  "declarations": [
+    {
+      "type": "VariableDeclarator",
+      "id": { "type": "Identifier", "name": "x" },
+      "init": { "type": "Literal", "value": 10 }
+    }
+  ]
+}
+```
+
+### **2️⃣ Transformation (Dönüştürme)**
+
+- AST’yi analiz eder ve eski JavaScript sürümüne dönüştürür.
+- **Örnek:**
+
+```js
+const sayHello = () => console.log("Merhaba!");
+```
+
+- Babel bunu **ES5 sürümüne çevirir**:
+
+```js
+var sayHello = function () {
+  console.log("Merhaba!");
+};
+```
+
+### **3️⃣ Code Generation (Kod Üretme)**
+
+- Yeni oluşturulan AST’yi **JavaScript koduna** çevirir.
+- Böylece tarayıcıda çalıştırılabilir hale gelir.
+
+---
+
+# **📌 BABEL NASIL KURULUR?**
+
+Babel'i kullanmak için **Node.js ve npm** gereklidir.
+
+### **1️⃣ Babel’i Projeye Yükleme**
+
+İlk olarak, bir proje klasörü oluşturun:
+
+```sh
+mkdir babel-project
+cd babel-project
+npm init -y
+```
+
+Daha sonra **Babel bağımlılıklarını yükleyin**:
+
+```sh
+npm install --save-dev @babel/core @babel/cli @babel/preset-env
+```
+| Paket               | Açıklama                            |
+| ------------------- | ----------------------------------- |
+| `@babel/core`       | Babel’in ana paketi                 |
+| `@babel/cli`        | Babel’in komut satırı arayüzü (CLI) |
+| `@babel/preset-env` | ES6+ kodlarını ES5’e çeviren paket  |
+
+---
+
+### **2️⃣ Babel Konfigürasyonu (`.babelrc`)**
+
+Proje kök dizinine `.babelrc` adında bir dosya oluşturun ve içine şu kodu ekleyin:
+
+```json
+{
+  "presets": ["@babel/preset-env"]
+}
+```
+
+Bu, **tüm modern JavaScript özelliklerini destekleyen bir çeviri ayarıdır.**
+
+---
+
+### **3️⃣ Babel Kullanımı**
+
+Babel’i çalıştırarak kodu dönüştürelim.
+
+Örneğin, **`src/index.js`** dosyasına şu ES6 kodunu ekleyelim:
+
+```js
+const sayHello = () => console.log("Merhaba Dünya!");
+sayHello();
+```
+
+Babel ile **bu kodu ES5’e dönüştürelim**:
+
+```sh
+npx babel src/index.js --out-file dist/index.js
+```
+
+Bu komut, `dist/index.js` içine şu ES5 kodunu yazacaktır:
+
+```js
+var sayHello = function () {
+  console.log("Merhaba Dünya!");
+};
+sayHello();
+```
+
+Böylece **eski tarayıcılarda çalışabilir hale geldi**! 🎉
+
+---
+
+# **📌 BABEL İLE PLUGİN KULLANIMI**
+
 
 ## .env
 ```sh
@@ -956,7 +1593,7 @@ http://localhost:1111/blog
 ```
 ---
 
-## Npm Nedir
+## Winston Nedir
 ```sh
 `winston` logger'ı, uygulamanızda hata ve bilgi loglarını düzgün bir şekilde yönetmek için kullanılır. 
 Bu kodu genellikle uygulamanızın **`index.js`** veya **`server.js`** gibi ana giriş dosyasına eklemeniz gerekir. 

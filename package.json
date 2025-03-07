@@ -11,6 +11,7 @@
     "nodemon_app_watch": "nodemon --watch src --watch dist ./dist/server.js",
     "dev:setup": "npm install && tsc && concurrently -k \"tsc -w --pretty\" \"nodemon ./dist/server.js\"",
     "dev:start": "tsc && concurrently -k \"tsc -w --pretty\" \"nodemon ./dist/server.js\""
+    "dev:json-server": "tsc  "
   },
   "repository": {
     "type": "git",
