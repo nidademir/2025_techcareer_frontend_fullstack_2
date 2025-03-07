@@ -1149,6 +1149,142 @@ Böylece **eski tarayıcılarda çalışabilir hale geldi**! 🎉
 
 # **📌 BABEL İLE PLUGİN KULLANIMI**
 
+# **📌 BABEL İLE PLUGİN KULLANIMI**
+
+Babel, sadece ES6’yı ES5’e çevirmekten daha fazlasını yapabilir. **Özel plugin’lerle** yeni özellikler ekleyebiliriz.
+
+### **1️⃣ Class Özelliği Desteği**
+
+Eğer şu ES6 sınıfı yazarsak:
+
+```js
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+}
+```
+
+Bu, **eski tarayıcılarda çalışmaz**.
+
+Bunu desteklemek için **class plugin’i yükleyelim**:
+
+```sh
+npm install --save-dev @babel/plugin-transform-classes
+```
+
+Sonra **`.babelrc`** içine ekleyelim:
+
+```json
+{
+  "presets": ["@babel/preset-env"],
+  "plugins": ["@babel/plugin-transform-classes"]
+}
+```
+
+Şimdi **Babel bu sınıfı ES5’e dönüştürebilir**.
+
+---
+
+# **📌 BABEL İLE REACT (JSX) KULLANIMI**
+
+React projelerinde JSX’i JavaScript’e çevirmek için Babel gereklidir.
+
+Örneğin, bir React bileşeni:
+
+```jsx
+const App = () => {
+  return <h1>Merhaba Dünya!</h1>;
+};
+```
+
+Bu kod, tarayıcı tarafından anlaşılamaz.
+
+Babel’in **React preset’ini yükleyelim**:
+
+```sh
+npm install --save-dev @babel/preset-react
+```
+
+Sonra **`.babelrc`** dosyamızı güncelleyelim:
+
+```json
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"]
+}
+```
+
+Artık Babel, JSX’i **standart JavaScript’e çevirir** ve tarayıcıda çalışabilir hale getirir!
+
+---
+
+# **📌 SONUÇ**
+
+✅ **Babel, modern JavaScript özelliklerini eski tarayıcılarla uyumlu hale getiren güçlü bir çevirici (transpiler)’dir.**  
+✅ **ES6+, React JSX, TypeScript gibi dilleri destekleyerek tarayıcılarda sorunsuz çalışmasını sağlar.**  
+✅ **Frontend ve Backend geliştiricileri için kritik bir araçtır ve tüm modern projelerde kullanılır.** 🚀
+## Emmet
+
+```sh
+
+```
+
+---
+
+Aşağıda, sık kullanılan **Emmet Preferences (Ayarları)** listesini bulabilirsin. Bu ayarları **VS Code** gibi editörlerde **settings.json** dosyasına ekleyerek kullanabilirsin.
+
+---
+
+### 🔹 **Sık Kullanılan Emmet Ayarları**
+
+```json
+{
+  // Emmet genişletmesini "Tab" tuşu ile etkinleştirir
+  "emmet.triggerExpansionOnTab": true,
+   // HTML ve CSS için otomatik kapanan etiketleri tamamlar
+  "emmet.syntaxProfiles": {
+    "html": {
+      "self_closing_tag": "xhtml"
+    }
+  },
+ // Boş öğelerde otomatik olarak boşluk bırakır
+  "emmet.preferences": {
+    "format.forceIndentationForEmmet": true,
+    "format.noIndentTags": "html, body, head",
+    "format.selfClosingStyle": "xhtml" // <br />, <img />, vb.
+  },
+    // CSS için kısa yazımları destekler
+  "emmet.showAbbreviationSuggestions": true,
+   // HTML etiketleri için otomatik tamamlama önerileri verir
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+// HTML genişletmelerinde satır sonu otomatik ekler
+  "emmet.variables": {
+    "lang": "en",
+    "charset": "UTF-8"
+  },
+  // Emmet ile genişletilmiş HTML kodlarını biçimlendirir
+  "editor.formatOnPaste": true,
+// JSX / React gibi ortamlarda Emmet’in çalışmasını sağlar
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  }
+  ```
+
+---
+
+### 📌 **Ne İşe Yarar?**
+
+- **Tab ile Emmet genişletme** → `div.container>ul>li*5` yazıp **Tab** tuşuna basınca genişler.
+- **HTML'de otomatik kapatma** → `<img>` gibi etiketler `xhtml` formatında kapanır.
+- **CSS için kısa tamamlama** → `m10` → `margin: 10px;` şeklinde tamamlanır.
+- **React / JSX desteği** → `emmet.includeLanguages` ile JSX içinde çalışmasını sağlar.
+
+Eğer farklı bir özellik eklemek istersen, söyle! 🚀
 
 ## .env
 ```sh
@@ -1234,7 +1370,7 @@ npm install dotenv
 #### **Kullanımı (`server.js`):**
 ```javascript
 // dotenv paketini yükle
-require('dotenv').config();
+require("dotenv").config();
 
 // .env dosyasından değişkenleri oku
 const port = process.env.PORT || 3000;
@@ -1315,14 +1451,15 @@ DB_USER=your_db_user
 DB_PASS=your_db_password
 ```
 
-✅ **Çoklu Ortam İçin Ayrı `.env` Dosyaları Kullanın:**  
-- `.env.development` → Geliştirme ortamı  
-- `.env.production` → Üretim ortamı  
-- `.env.test` → Test ortamı  
+✅ **Çoklu Ortam İçin Ayrı `.env` Dosyaları Kullanın:**
+
+- `.env.development` → Geliştirme ortamı
+- `.env.production` → Üretim ortamı
+- `.env.test` → Test ortamı 
 
 Örneğin, **Node.js** projelerinde `dotenv` paketi ile ortam belirtebilirsiniz:
 ```javascript
-require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` });
+require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` });
 ```
 
 ✅ **Şifreleri `.env` Yerine Gizli Yönetim Sistemlerinde Saklayın:**  
@@ -1351,6 +1488,7 @@ AWS Secrets Manager, HashiCorp Vault veya Kubernetes Secrets gibi araçlar daha 
 ---
 
 ## nodemon.json (Tanım)
+
 ```sh
 Bu JSON dosyası, genellikle **Nodemon** konfigürasyonu olarak kullanılır (`nodemon.json`). Nodemon, Node.js uygulamalarında dosya değişikliklerini izleyerek otomatik yeniden başlatma sağlayan bir araçtır.
 
@@ -1374,11 +1512,13 @@ Aşağıda tüm seçenekleri detaylı açıklamalarıyla birlikte inceleyelim:
 ```
 
 ### Açıklamalar:
+
 - **"watch"**: Belirtilen klasörlerde herhangi bir dosya değişikliği olduğunda Nodemon otomatik olarak süreci yeniden başlatır.
 - **"ext"**: Hangi dosya uzantılarının izleneceğini belirler. Burada hem TypeScript (`.ts`) hem de JavaScript (`.js`) dosyaları izlenmektedir.
 - **"exec"**: Çalıştırılacak komutu tanımlar. TypeScript projelerinde, `.ts` dosyaları `dist` klasörüne derlendiği için, çalıştırılacak `server.js` dosyası `dist` klasöründe belirtilmiştir.
 
 ### Kullanım Senaryosu:
+
 - TypeScript kodlarını yazıp kaydettiğinizde, Nodemon `src` klasöründe değişiklikleri algılar.
 - TypeScript derleyicisi (`tsc`) kodları otomatik olarak `dist` klasörüne çevirir.
 - Nodemon, `dist/server.js` dosyasını yeniden başlatarak değişikliklerin etkili olmasını sağlar.
@@ -1387,6 +1527,7 @@ Bu konfigürasyon, özellikle **Node.js + TypeScript** projelerinde geliştirme 
 
 
 ## bs-config.json
+
 ```sh
 {
   "port": 3000,
@@ -1400,6 +1541,7 @@ Bu konfigürasyon, özellikle **Node.js + TypeScript** projelerinde geliştirme 
 ---
 
 ## bs-config.json
+
 ```sh
 {
   // Tarayıcının çalışacağı port numarasını belirler.
@@ -1425,13 +1567,15 @@ Bu konfigürasyon, özellikle **Node.js + TypeScript** projelerinde geliştirme 
 ```
 ---
 ### **`bs-config.json` Nedir?**
-`bs-config.json`, **BrowserSync** için kullanılan bir yapılandırma (konfigürasyon) dosyasıdır. **BrowserSync**, web geliştirme sırasında dosya değişikliklerini izleyen, tarayıcıları otomatik olarak yenileyen ve cihazlar arasında senkronizasyon sağlayan bir araçtır. 
+
+`bs-config.json`, **BrowserSync** için kullanılan bir yapılandırma (konfigürasyon) dosyasıdır. **BrowserSync**, web geliştirme sırasında dosya değişikliklerini izleyen, tarayıcıları otomatik olarak yenileyen ve cihazlar arasında senkronizasyon sağlayan bir araçtır.
 
 Bu dosya, **BrowserSync'in nasıl çalışacağını belirlemek için** kullanılır ve komut satırında ekstra parametreler yazmak yerine ayarları JSON formatında saklamaya olanak tanır.
 
 ---
 
 ### **Detaylı Açıklamalar:**
+
 ```json
 {
   // Tarayıcının çalışacağı port numarasını belirler.
@@ -1453,11 +1597,14 @@ Bu dosya, **BrowserSync'in nasıl çalışacağını belirlemek için** kullanı
 ---
 
 ### **Parametrelerin Detaylı Açıklamaları:**
-1. **`"port": 3000`**  
-   - BrowserSync sunucusunun hangi portta çalışacağını belirler.  
+
+1. **`"port": 3000`**
+
+   - BrowserSync sunucusunun hangi portta çalışacağını belirler. 
    - **Örneğin:** `localhost:3000` adresine girerek projeye erişebilirsiniz.
 
 2. **`"files": ["./*.html", "./*.css", "./*.js"]`**  
+
    - Bu dosyalar **izlenir** ve değişiklik yapıldığında tarayıcı otomatik olarak yenilenir.
    - Burada **tüm HTML, CSS ve JavaScript dosyaları** takip edilmektedir.
    - **Örnek:** 
@@ -1465,42 +1612,51 @@ Bu dosya, **BrowserSync'in nasıl çalışacağını belirlemek için** kullanı
      - `style.css` veya `main.css` değiştirildiğinde tarayıcı yenilenir.
      - `app.js` veya `script.js` değiştirildiğinde tarayıcı yenilenir.
 
-3. **`"server": { "baseDir": "./" }`**  
-   - **Hangi dizinden dosyaların sunulacağını belirler.**  
+3. **`"server": { "baseDir": "./" }`**
+
+   - **Hangi dizinden dosyaların sunulacağını belirler.**
    - `./` dizini, **projenin ana dizini** olduğu için buradaki dosyalar tarayıcıya sunulur.
    - **Örneğin:** `index.html` dosyanız `./` kök dizininde yer alıyorsa, `localhost:3000` adresine giderek direkt olarak açabilirsiniz.
 
-4. **`"index": "index.html"`**  
-   - **Tarayıcı açıldığında otomatik olarak yüklenecek varsayılan dosyadır.**  
+4. **`"index": "index.html"`**
+   - **Tarayıcı açıldığında otomatik olarak yüklenecek varsayılan dosyadır.** 
    - **Örneğin:** `index.html` olarak ayarlandıysa, `localhost:3000` adresine girildiğinde `index.html` otomatik olarak yüklenir.
 
 ---
 
 ### **Kullanım Senaryosu:**
+
 1. **Otomatik Tarayıcı Yenileme (Live Reloading)**
+ 
    - HTML, CSS veya JavaScript dosyalarında değişiklik yaptığınızda, tarayıcı otomatik olarak yenilenir.
    - Sayfayı manuel olarak yenilemek zorunda kalmazsınız.
 
-2. **Yerel Geliştirme Sunucusu**
+3. **Yerel Geliştirme Sunucusu**
+
    - Apache veya Node.js gibi ek bir sunucu kurmaya gerek kalmadan, **hızlı bir geliştirme ortamı oluşturur**.
 
-3. **Mobil ve Çoklu Cihaz Senkronizasyonu**
+4. **Mobil ve Çoklu Cihaz Senkronizasyonu**
+
    - Eğer farklı cihazlardan test yapıyorsanız, **bir cihazdaki kaydırma hareketi, tıklamalar ve sayfa değişiklikleri diğer cihazlarda da senkronize edilir**.
 
 ---
 
 ### **Nasıl Kullanılır?**
+
 1. **BrowserSync’i yükleyin** (eğer yüklenmediyse):
+  
    ```sh
    npm install -g browser-sync
    ```
 
 2. **BrowserSync’i `bs-config.json` dosyası ile başlatın:**
+  
    ```sh
    browser-sync start --config bs-config.json
    ```
 
 3. **Tarayıcınızda şu adrese gidin:**  
+  
    ```
    http://localhost:3000
    ```
@@ -1509,15 +1665,14 @@ Bu dosya, **BrowserSync'in nasıl çalışacağını belirlemek için** kullanı
 ---
 
 ### **Sonuç:**
+
 **`bs-config.json` dosyası**, **HTML, CSS ve JavaScript projelerinde canlı yenileme (live reload) yaparak geliştirme sürecini hızlandıran bir yapılandırmadır.**  
 Özellikle **statik web projeleri** için **hızlı önizleme** ve **otomatik tarayıcı yenileme** gibi avantajlar sunar. 🚀
 
-
----
----
 ---
 
 ## Node JS Nedir ?
+
 ```sh
 NodeJS :
 - Chrome V8 Javascript motorunu kullanan, açık kaynak kodlu,
@@ -1529,6 +1684,7 @@ NodeJS :
 ---
 
 ## Node JS Özellikleri
+
 ```sh
 Javascript betik dilimiz senkron(Aynı anda sadece bir iş yapan) çalışır.
 
@@ -1559,6 +1715,7 @@ Event-Driven (Olay odaklıdır),Non-Blocking I/O Modeli (Engelsiz Input(Girdi), 
 ---
 
 ## Node JS Tarihçesi
+
 ```sh
 2009 geliştirilmeye başlandı
 2010 Non-blocking (Engelsiz)
@@ -1568,6 +1725,7 @@ LTS(Long Term Support: Uzaun vadeli destek)
 ---
 
 ##  Node JS Framework
+
 ```sh
 - Express.js (En popüler olanı) hafiftir.
 - Koa.js (ES6 destekliyor) daha az kod
@@ -1579,6 +1737,7 @@ LTS(Long Term Support: Uzaun vadeli destek)
 ---
 
 ## Node JS Framework Express
+
 ```sh
 - node js için en popüler hafif,esnek, bir web geliştirme platformudur.
 - Middleware: orta katman için uygundur.
@@ -1594,6 +1753,7 @@ http://localhost:1111/blog
 ---
 
 ## Winston Nedir
+
 ```sh
 `winston` logger'ı, uygulamanızda hata ve bilgi loglarını düzgün bir şekilde yönetmek için kullanılır. 
 Bu kodu genellikle uygulamanızın **`index.js`** veya **`server.js`** gibi ana giriş dosyasına eklemeniz gerekir. 
@@ -1605,6 +1765,7 @@ npm install winston
 ```
 
 ## Npm Nedir
+
 ```sh
 Npm(Node Package Management): Paket yönetim sistemidir.
 Npm bize hızlı kodlar yazmamız için gereken alt yapıyı sunar.
@@ -1612,12 +1773,14 @@ Npm bize hızlı kodlar yazmamız için gereken alt yapıyı sunar.
 ---
 
 ## EJS
+
 ```sh
 **EJS (Embedded JavaScript)**, Node.js tabanlı uygulamalarda dinamik HTML içerik oluşturmak için kullanılan bir **şablon (template) motoru**dur.
 
 EJS ile, HTML sayfalarının içine JavaScript kodlarını gömerek dinamik içerik üretebilir ve sayfayı istemciye sunabilirsiniz.
 
 ### EJS'in Temel Özellikleri:
+
 1. **JavaScript ile Entegre**: EJS, HTML içine JavaScript kodu gömmeye izin verir. 
 Bu, veritabanından gelen veya başka bir kaynaktan alınan verileri HTML içerisine kolayca entegre etmenizi sağlar.
 
@@ -1634,8 +1797,8 @@ Bu, veritabanından gelen veya başka bir kaynaktan alınan verileri HTML içeri
 
 - `<%= %>`: Değişken veya ifade değerini eklemek için kullanılır (HTML çıktısına veri eklemek).
 
-2. **Veri Bağlama (Data Binding)**: Sunucuda işlenen verileri, HTML sayfalarına kolayca ekleyebilirsiniz. 
-Node.js tarafında oluşturulan veriler, EJS şablonuna gönderilir ve burada dinamik içerik oluşturulabilir.
+2. **Veri Bağlama (Data Binding)**: Sunucuda işlenen verileri, HTML sayfalarına kolayca ekleyebilirsiniz.
+   Node.js tarafında oluşturulan veriler, EJS şablonuna gönderilir ve burada dinamik içerik oluşturulabilir.
 
    Örneğin, bir Express.js route'unda:
 
@@ -1648,11 +1811,11 @@ Node.js tarafında oluşturulan veriler, EJS şablonuna gönderilir ve burada di
 
    Bu veriler, EJS şablonunda yukarıda gösterilen şekilde kullanılarak liste halinde görüntülenir.
 
-3. **Esnek ve Hafif**: EJS, birçok şablon motoruna göre oldukça esnektir ve kolayca öğrenilebilir. 
-HTML yapısının içerisine eklenen JavaScript kodu ile sadece gerekli yerlerde dinamik veri gösterimi yapılabilir.
+3. **Esnek ve Hafif**: EJS, birçok şablon motoruna göre oldukça esnektir ve kolayca öğrenilebilir.
+   HTML yapısının içerisine eklenen JavaScript kodu ile sadece gerekli yerlerde dinamik veri gösterimi yapılabilir.
 
-4. **Koşullu İfadeler ve Döngüler**: EJS, if-else blokları veya döngü yapılarını HTML ile birlikte kullanmanıza olanak tanır, 
-bu da şablonların esnekliğini artırır.
+4. **Koşullu İfadeler ve Döngüler**: EJS, if-else blokları veya döngü yapılarını HTML ile birlikte kullanmanıza olanak tanır,
+   bu da şablonların esnekliğini artırır.
 
    Koşullu ifade örneği:
 
@@ -1664,10 +1827,11 @@ bu da şablonların esnekliğini artırır.
    <% } %>
    ```
 
-5. **Layout Desteği**: EJS, şablonlar arasında parçalama ve yeniden kullanma işlemlerini destekler. 
-Layout'lar oluşturup, çeşitli şablonları bu ana yapıya dahil edebilirsiniz.
+5. **Layout Desteği**: EJS, şablonlar arasında parçalama ve yeniden kullanma işlemlerini destekler.
+   Layout'lar oluşturup, çeşitli şablonları bu ana yapıya dahil edebilirsiniz.
 
 ### EJS Nasıl Kullanılır?
+
 EJS'yi Node.js projenize şu şekilde dahil edebilirsiniz:
 
 1. **EJS'yi Projeye Eklemek**:
@@ -1697,17 +1861,36 @@ EJS'yi Node.js projenize şu şekilde dahil edebilirsiniz:
    ```ejs
    <h1><%= title %></h1>
    <p>Bu, dinamik olarak oluşturulan bir sayfadır.</p>
-   ```
-
-### EJS Kullanmanın Avantajları:
-
-- **Basit ve Öğrenmesi Kolay**: HTML ile iç içe geçmiş JavaScript kodu, özellikle önceden HTML ve JavaScript bilen geliştiriciler için kullanımı kolaydır.
-
-- **Hafif ve Performanslı**: Fazla ek kütüphanelere ihtiyaç duymadan, doğrudan HTML içine dinamik içerik eklemek mümkün olur.
-
-- **Node.js ile Entegre**: Express.js gibi popüler Node.js çerçeveleriyle mükemmel bir şekilde entegre olabilir.
 
 ## EJS, basit dinamik HTML içerik oluşturma ihtiyacı olan projelerde oldukça kullanışlıdır ve Node.js uygulamalarıyla yaygın bir şekilde kullanılır.
+
+Büyük projelerde **EJS (Embedded JavaScript)** kullanmak çoğu zaman **mantıklı bir tercih olmaz**. Çünkü EJS, **server-side rendering (SSR)** odaklı ve çok temel bir şablon motorudur. Ancak büyük projelerde ölçeklenebilirlik, modülerlik ve performans gibi faktörler daha önemli hale gelir. İşte bazı nedenler:
+
+### ❌ **EJS Kullanmanın Dezavantajları**
+
+1. **Statik HTML Yapısı** → React, Vue veya Angular gibi bileşen bazlı yapılar kadar esnek değildir.
+2. **Zayıf Yeniden Kullanılabilirlik** → Component-based yaklaşımı desteklemediği için kod tekrarına neden olabilir.
+3. **Dinamik İçerik Yönetimi** → SPA (Single Page Application) ile entegrasyonu zordur.
+4. **Bakım Zorluğu** → Büyük projelerde HTML ve JavaScript iç içe geçtiğinde kod karmaşıklaşır.
+5. **SEO Avantajı Düşük** → Server-side rendering yapmasına rağmen, Next.js gibi gelişmiş SSR çözümlerine göre daha az esnektir.
+
+### ✅ **EJS Kullanmanın Avantajları**
+
+- **Hızlı prototipleme** için uygundur.
+- **Express.js** ile entegrasyonu kolaydır.
+- Küçük ve orta ölçekli projelerde **hafif ve basit** bir çözüm sunar.
+
+### 📌 **Büyük Projeler İçin Alternatifler**
+
+Eğer büyük bir projede şablon motoru kullanacaksan, şu seçenekleri değerlendirebilirsin:
+
+- **Next.js (React tabanlı SSR ve SSG desteği sunar)**
+- **Nuxt.js (Vue tabanlı SSR çözümü)**
+- **Pug (Daha okunaklı şablon motoru)**
+- **Handlebars.js (Daha esnek ve modüler)**
+
+**Sonuç:** Küçük projelerde EJS kullanmak hızlı çözümler sunabilir ama büyük projelerde **React, Vue veya SSR destekli Next.js / Nuxt.js gibi çözümleri** tercih etmek daha mantıklıdır.
+
 
 ## Mongo DB
 ```sh
@@ -1894,7 +2077,8 @@ Logger'ı hatalar, bilgi mesajları veya özel olaylar için kullanabilirsiniz.
 ```
 ---
 
-## compression
+## compression (sıkıştırma)
+
 ```sh
 compression:
 npm install compression
@@ -1907,7 +2091,20 @@ app.use(compression);
 ```
 ---
 
-## Rate Limited
+## HELMET (Syber Security Saldırılara karşın)
+
+```sh
+Helmet: Http başlıklarını güvenli hale getirir ve yaygın saldırı vektörlerini azaltır
+
+npm install helmet
+const helmet = require("helmet");
+app.use(helmet());
+```
+
+---
+
+## Rate Limited (Syber Security Saldırılara karşın)
+
 ```sh
 npm install express-rate-limit
  Rate Limited (İstek Sınırlamasını):
@@ -1917,7 +2114,7 @@ npm install express-rate-limit
 // Her 15 dakika içinde en fazla 100 istek atılabilinir.
 const rateLimit=require('express-rate-limit');
 const limiter = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 dakika
+    windowMs: 15 * 60 * 1000, //1000ms(1sn)* 60sn=1dakika* 15 dakika
     max: 100, // buy süre zarfında en fazla bu kadar isterk atabilirsiniz.
     message: "İstek sayısı fazla yapıldı, lütfen biraz sonra tekrar deneyiniz"
 });
@@ -1927,6 +2124,7 @@ app.use("/api/", limiter)
 ---
 
 ## CORS
+
 ```sh
 CORS
 npm install cors
@@ -1953,17 +2151,8 @@ app.get("/form", csrfProtection, (req, res) => {
 ```
 ---
 
-## HELMET
-```sh
-Helmet: Http başlıklarını güvenli hale getirir ve yaygın saldırı vektörlerini azaltır
+## Swagger (API Document)
 
-npm install helmet
-const helmet = require("helmet");
-app.use(helmet());
-```
----
-
-## Swagger
 ```sh
 ## SWAGGER
 // http://localhost:1111/api-docs
@@ -2157,6 +2346,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 ---
 
 ## Konu
+
 ```sh
 ```
 ---
