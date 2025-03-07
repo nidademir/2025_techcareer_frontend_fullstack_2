@@ -104,7 +104,7 @@ const clearErrors = () => {
     // Blog Güncelleme
     // Blog Silme
     // end document.ready
-};
+});
 
   /////////////////////////////////////////////////////////////////////////////////
   // Kullanıcı Blog Content(İçerik) alanına yazdıkça geriye kalan karakter sayısını güncelleyen
@@ -122,4 +122,4 @@ const clearErrors = () => {
   // Blog Bulma
   // Blog Güncelleme
   // Blog Silme
-}); // end document.ready
+  // end document.ready

@@ -2,7 +2,7 @@
     "port": 5000,
     "host": "localhost",
     "delay":1000,
-    "watch": "db.json"
+    "watch": "db.json",
     "routes": {
         "/api/blogs": "/blogs"
     }
