@@ -28,6 +28,9 @@
       referrerpolicy="no-referrer"
     />
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <!-- External css -->
     <!-- NOT: `/css/styles.css` için  public dizininde olması gerekiyor -->
     <link rel="stylesheet" href="/css/style.css" />
@@ -37,6 +40,11 @@
     <!-- start codes -->
 
     <p><%= csrfToken %></p>
+
+form#blog-form[action="/blog" method="get" name="blog-form"]>\n
+input#_csrf[type="hidden" name="_csrf" value="<%= csrfToken %>"]+\n
+div.form-group.mb-3>span[for="header"].form-label{HEADER}+\n
+input#header.form-control[type="text" name="header" placeholder="blog başlığı" title="blog başlığı" autofocus]
 
     <!-- form#blog-form>input#_csrf+(div.form-group.mb-3>span#id(id$){Content-$}+(input.form-control#header))*4 -->
     <form action="/blog" method="get" id="blog-form" name="blog-form">
@@ -71,7 +79,7 @@
         rows="5"
         ></textarea>
       </div>
-      <!-- small#char-count.text-success{Kalan Harf Sayısı: 2000} -->
+ 
       <small id="char-count" class="text-success">Kalan Harf Sayısı: 2000</small>
 
        <!-- BLOG AUTHOR -->
@@ -132,6 +140,8 @@
       </thead>
     </table>
 
+    
+
     <a class="btn btn-primary" href="/">Anasayfa'ya Git</a>
 
     <!-- end codes -->
@@ -148,11 +158,9 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- external js -->
     <!-- NOT: `/css/styles.css` için  public dizininde olması gerekiyor -->
     <script src="/js/blog.js"></script>
   </body>
-</html>
+</html
