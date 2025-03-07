@@ -49,6 +49,7 @@ const clearErrors = () => {
       $(".error-message").remove();
     }
 };
+
     ///////////////////////////////////////////////////////////////////
     // VALIDATION
     // Blog Form Kontrol Doğrulama(Validation)
