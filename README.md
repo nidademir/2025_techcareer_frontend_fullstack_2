@@ -1,17 +1,16 @@
-# Techcareer Node.js(Express) Html5,Css3,Bootstrap5,TS,EJS,+ES5,Mongo 
-[Github Linki](https://github.com/nidademir/2025_techcareer_frontend_fullstack_2)
----
+# Techcareer Node.js(Express) Html5,Css3,Bootstrap5,TS,EJS,+ES5,Mongo
 
-## git clone 
-https://github.com/hamitmizrak/2025_techcareer_frontend_fullstack_2
+[Github Linki](https://github.com/hamitmizrak/2025_techcareer_frontend_fullstack_2)
 
-----
+## git clone https://github.com/hamitmizrak/2025_techcareer_frontend_fullstack_2
+
 ### Npm Start
-> npm run dev:start
-> json-server --watch db.json --port 3000
-> ----
+> npm run dev:start (json-server olmadan)
+> json-server --watch db.json --port 3000 (Sadece json-server çalıştır)
+> npm run dev:tsc:nodemon:json-server
 
 ## Tutorials Link
+
 [Html5 Tutorials](https://www.w3schools.com/html/)
 [Css3 Tutorials](https://www.w3schools.com/css/default.asp)
 [JS Tutorials](https://www.w3schools.com/js/default.asp)
@@ -19,6 +18,7 @@ https://github.com/hamitmizrak/2025_techcareer_frontend_fullstack_2
 [TS Tutorials](https://www.w3schools.com/typescript/index.php)
 [GIT Tutorials](https://www.w3schools.com/git/default.asp)
 [Emmet IO](https://docs.emmet.io/cheat-sheet/)
+
 ---
 
 ## Setup Link
@@ -31,9 +31,11 @@ https://github.com/hamitmizrak/2025_techcareer_frontend_fullstack_2
 [Box Shadow Online](https://cssgenerator.pl/en/box-shadow-generator/)
 [jQuery](https://jquery.com//)
 [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install//)
+
 ---
 
 # Programming Install
+
 [Visual Studio Code](https://code.visualstudio.com/download)
 [Git](https://git-scm.com/downloads)
 [Docker](https://www.docker.com/products/docker-desktop/)
@@ -41,6 +43,7 @@ https://github.com/hamitmizrak/2025_techcareer_frontend_fullstack_2
 [Mongo Database Download](https://www.mongodb.com/try/download/community)
 [MongoDB Localhost Shell](https://www.mongodb.com/try/download/shell)
 [Mongo Database Cloud](https://www.mongodb.com/products/platform/cloud)
+
 ---
 
 ## Script run (Typescript başlat)
@@ -61,6 +64,7 @@ npm run dev:start
 
 UNUTMA: Mongodb localhost veya docker mongodb veya cloud mongo açık olması gerekiyor
 ```
+
 ---
 
 ## Version
@@ -73,7 +77,6 @@ tsc --version
 mongosh --version
 mongo --version
 ```
----
 
 ## VS CODE RUNNING
 
@@ -102,7 +105,13 @@ git branch
 git branch frontend
 git checkout frontend
 
+git clone https://github.com/hamitmizrak/2025_techcareer_frontend_fullstack_2.git
+```
+
+---
+
 ## Visual Studio Code (VS Code) Extensions
+
 ```sh
 Auto Close Tag            => Jun Han
 Auto Complete Tag         => Jun Han
@@ -120,6 +129,9 @@ Material Icon Theme        => Philipp Kief
 Prettier - Code Formatter  => Prettier
 Prettier ESLint            => Rebecca Vest
 Rainbow Brackets           => MHammed Talhaouy
+```
+
+---
 
 ## Docker
 
@@ -128,6 +140,7 @@ Turn Windows features on or off => Hyper-V, Virtual Machine Paltform, Windows Hy
 Microsoft Store => Search => wsl2 => Ubuntu 22.04.5 LTS kuralım.
 Dikkat: Eğer Ubuntu 22.04.5 kuramazsanız, Turn Windows features bilgileri kapat sonra tekrar aç ve bilgisayarın restart
 ```
+
 ---
 
 ## Mongo Localhost
@@ -135,6 +148,7 @@ Dikkat: Eğer Ubuntu 22.04.5 kuramazsanız, Turn Windows features bilgileri kapa
 ```sh
 port:27017
 ```
+
 ---
 
 ## Teknoloji İsimleri
@@ -155,6 +169,7 @@ REST API
 NGINX
 CI/CD
 ```
+
 ---
 
 ## Teknoloji İçerikleri
@@ -179,9 +194,11 @@ swagger-ui-express
 typescript
 winston
 ```
+
 ---
 
 ## VSCode (settings.json) Version-1
+
 ```sh
 {
     "workbench.colorTheme": "Default Dark+",
@@ -207,13 +224,13 @@ winston
         "strings": true
     },
 ```
----
 
+---
 
 ## VSCode (settings.json) Version-2
 
 ```sh
- "workbench.colorTheme": "Default Dark+",
+  "workbench.colorTheme": "Default Dark+",
   "editor.mouseWheelZoom": true,
   "editor.fontSize": 16,
   "explorer.confirmDragAndDrop": false,
@@ -282,11 +299,10 @@ winston
 npm init     (Package.json)
 npm init -y
 
-npm root
-npm root -g
 npm root     (Local: Proje üzerinde yüklenen Scriptlerin node_modules)
 npm root -g  (Glocal: Proje üzerinde yüklenen Scriptlerin node_modules)
 ```
+
 ---
 
 ## NPM INIT
@@ -298,14 +314,14 @@ package name:
 2-) boşluk kullanma bunun yerine (- veya _ kullan)
 3-) Türkçe karakterlerden (üğşçö) kullanma
 
-package name: 2025_techcareer_frontend_fullstack_2
+package name: offline_node_blog
 version: v1.0.0 (Semantic version)
 description: Html5,css3,bootstrap5, js, es, nodejs, jquery, express,nodemon
 entry point: index.js
 test command: start
-git repository: https://github.com/nidademir/2025_techcareer_frontend_fullstack_2.git
+git repository: https://github.com/hamitmizrak/2025_techcareer_frontend_fullstack_2.git
 keywords: Html5,css3,bootstrap5, js, es, ejs, nodejs, nodemon, jquery, express
-author: Nida Demir
+author: Yüksek Bilgisayar Mühendisi Hamit Mızrak
 license: ISC
 Is this OK? yes
 ```
@@ -320,7 +336,7 @@ Default
 {
   "name": "2025_techcareer_frontend_fullstack_2",
   "version": "1.0.0",
-  "description": "[GitHub Address](https://github.com/nidademir/2025_techcareer_frontend_fullstack_2.git)\r [Mongo Database]()\r ---",
+  "description": "[GitHub Address](https://github.com/hamitmizrak/2025_techcareer_frontend_fullstack_2.git)\r [Mongo Database]()\r ---",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -348,11 +364,11 @@ Default
     "build_watch": "tsc -w --pretty",
     "nodemon_app_watch": "nodemon --watch src --watch dist ./dist/server.js",
     "dev:setup": "npm install && tsc && concurrently -k \"tsc -w --pretty\" \"nodemon ./dist/server.js\"",
-        "dev:start": "tsc && concurrently -k \"tsc -w --pretty\" \"nodemon ./dist/server.js\"",
+    "dev:start": "tsc && concurrently -k \"tsc -w --pretty\" \"nodemon ./dist/server.js\"",
     "dev:babel:start": ""
   },
   "keywords": [
-     "Html5, Css3, Js, NodeJS, Express JS, ES5+,TS, Bootstrap5, EJS, jQuery"
+    "Html5, Css3, Js, NodeJS, Express JS, ES5+,TS, Bootstrap5, EJS, jQuery"
   ],
   "author": "MSc Computer Enginner Hamit Mızrak",
   "license": "ISC",
@@ -366,6 +382,8 @@ Default
     "express": "^4.21.2",
     "express-rate-limit": "^7.5.0",
     "helmet": "^8.0.0",
+    "jquery": "^3.7.1",
+    "json-server": "^1.0.0-beta.3",
     "mongodb": "^6.13.0",
     "mongoose": "^8.10.0",
     "morgan": "^1.10.0",
@@ -374,6 +392,10 @@ Default
     "winston": "^3.17.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.26.4",
+    "@babel/core": "^7.26.9",
+    "@babel/preset-env": "^7.26.9",
+    "@types/jquery": "^3.5.32",
     "@types/node": "^22.13.1",
     "concurrently": "^9.1.2",
     "cross-env": "^7.0.3",
@@ -391,6 +413,7 @@ Default
   }
 }
 ```
+
 ---
 
 ## npm node_modules delete
@@ -401,6 +424,7 @@ rm -rf node_modules
 ls -al
 npm install
 ```
+
 ---
 
 ## NPM Sıklıkla Kullanılan Komutlar-1
@@ -424,6 +448,7 @@ npm update express        # Sadece verdiğimzi dosyaları güncelleme yapıyor.
 npm uninstall express
 npm uninstall express@4.16.1
 ```
+
 ---
 
 ## NPM Sıklıkla Kullanılan Komutlar-2
@@ -436,8 +461,9 @@ npm list -g --depth=0    # Globalde sadece ana branch'e yüklediklerimi bana gö
 
 npm root                 # Local projemizdeli node_modules kütüphanesini göstersin
 npm root -g              # GLocal projemizdeli node_modules kütüphanesini göstersin
-Global node_modules: C:\Users\nidad\AppData\Roaming\npm\node_modules
+Global node_modules: C:\Users\Hamit-Mizrak\AppData\Roaming\npm\node_modules
 ```
+
 ---
 
 ## NPM Sıklıkla Kullanılan Komutlar-3
@@ -462,6 +488,7 @@ npm login                # npm hesabınıza giriş içindir)
 npm pack                 # Node.js paketini .tgz sıkıştırma formatında ekliyor
 npm publish              # ilgili pkaeti npm gönder
 ```
+
 ---
 
 ## Npm Package Install (Local --save)
@@ -477,8 +504,8 @@ npm list
 npm i body-parser compression cookie-parser cors csurf  ejs  express express-rate-limit helmet mongodb mongoose morgan  swagger-jsdoc swagger-ui-express  winston --save
 
 npm install --save json-server
-
 ```
+
 ---
 
 ## Npm Package Install (Local --save-dev)
@@ -501,6 +528,7 @@ npm install
 npm dedupe  # Bağımlılıkların tekrarlanan kopyalarını temizler.
 npm list
 ```
+
 ---
 
 ## Npm Package Install (Global)
@@ -513,16 +541,19 @@ npm list -g
 npm root -g
 
 npm i body-parser compression cors csurf cookie-parser ejs  express express-rate-limit helmet mongodb morgan mongoose swagger-jsdoc swagger-ui-express prettier ts-node   winston lite-server  @types/node dotenv concurrently eslint eslint-config-prettier eslint-plugin-prettier npm-run-all -g
+
+npm install -g json-server
 npm dedupe  # Bağımlılıkların tekrarlanan kopyalarını temizler.
 npm list -g
 ```
+
 ---
 
 ## Typescript kurulum
 
 ```sh
 npm install typescript -g          # global
-npm install typescript --save-dev  # local 
+npm install typescript --save-dev  # local
 npm install typescript -D          # local Dev-dependency
 
 tsconfig dosyası için aşağıdaki komutu çalıştır:
@@ -532,6 +563,7 @@ tsc --init
 tsc
 tsc -w (Sistem kendi compiler yapıyor yazdıklarımı kendi ekliyor.)
 ```
+
 ---
 
 ## Typescript (tsconfig.json )
@@ -553,6 +585,7 @@ tsc -w (Sistem kendi compiler yapıyor yazdıklarımı kendi ekliyor.)
   "exclude": ["node_modules"]
 }
 ```
+
 ---
 
 ## Typescript (tsconfig.json )
@@ -563,9 +596,11 @@ tsc -w (Sistem kendi compiler yapıyor yazdıklarımı kendi ekliyor.)
 {
   "compilerOptions": {
     // Derlenecek JavaScript sürümünü belirler. ES6 olarak ayarlandı.
-  "target": "ES6",
-  // Modül sistemini belirler. CommonJS olarak ayarlandı. (Node.js projeleri için yaygın kullanılır.)
+    "target": "ES6",
+
+    // Modül sistemini belirler. CommonJS olarak ayarlandı. (Node.js projeleri için yaygın kullanılır.)
     "module": "commonjs",
+
     // Kaynak dosyaların bulunduğu dizini belirtir. (TypeScript kaynak kodları burada olacak.)
     "rootDir": "./src",
 
@@ -585,12 +620,15 @@ tsc -w (Sistem kendi compiler yapıyor yazdıklarımı kendi ekliyor.)
     "forceConsistentCasingInFileNames": true
   },
 
-    // Proje içine dahil edilecek dosya ve klasörleri belirler. Burada `src` klasörü içindeki tüm dosyalar derlenecek.
+  // Proje içine dahil edilecek dosya ve klasörleri belirler. Burada `src` klasörü içindeki tüm dosyalar derlenecek.
   "include": ["src/**/*"],
 
   // Derleme dışında tutulacak dosya ve klasörleri belirler. `node_modules` hariç tutulmuş.
   "exclude": ["node_modules"]
 }
+```
+
+---
 
 ## script => package.json typescript
 
@@ -609,6 +647,7 @@ npm install  nodemon -g
 npm install  nodemon -D
 npm install  nodemon --save-dev
 ```
+
 ---
 
 ## nodemon.json (Nodemon.json)
@@ -620,6 +659,7 @@ npm install  nodemon --save-dev
   "exec": "node ./dist/server.js"
 }
 ```
+
 ---
 
 ## script => package.json nodemon-1
@@ -629,6 +669,7 @@ npm install  nodemon --save-dev
      "test": "echo \"Error: no test specified\" && exit 1",
   },
 ```
+
 ---
 
 ## package.json içinden Script yazmak-2
@@ -644,6 +685,7 @@ npm install  nodemon --save-dev
     "dev:start": "tsc && concurrently -k \"tsc -w --pretty\" \"nodemon ./dist/server.js\""
   },
 ```
+
 ---
 
 ## package.json içinden Script yazmak-3
@@ -668,6 +710,7 @@ npm install  nodemon --save-dev
     "senkron:index": "npm-run-all --parallel  build_watch nodemon_index_watch"
   }
 ```
+
 ---
 
 ## Json-Server
@@ -707,7 +750,7 @@ npm install  nodemon --save-dev
    - **GET** → Veri çekme
    - **PUT / PATCH** → Veri güncelleme
    - **DELETE** → Veri silme
-  - Bu işlemleri **hiçbir backend kodu yazmadan** gerçekleştirebilirsiniz.
+   - Bu işlemleri **hiçbir backend kodu yazmadan** gerçekleştirebilirsiniz.
 
 4. **Gerçek API Davranışı**
 
@@ -717,6 +760,8 @@ npm install  nodemon --save-dev
 5. **Prototipleme ve Test Ortamı**
    - Büyük projelerde **backend tamamlanmadan frontend geliştiricilerinin** API’yi test etmesine olanak tanır.
    - **Mobil uygulamalar için de veri kaynağı olarak kullanılabilir**.
+
+---
 
 ## **📌 JSON-Server Nasıl Kurulur?**
 
@@ -738,7 +783,7 @@ Kök dizinde **`db.json`** adında bir dosya oluşturun ve içine şu veriyi ekl
 ```json
 {
   "posts": [
-     { "id": 1, "title": "JSON Server", "content": "Kolay REST API" },
+    { "id": 1, "title": "JSON Server", "content": "Kolay REST API" },
     { "id": 2, "title": "Node.js", "content": "JavaScript ile backend" }
   ],
   "users": [
@@ -760,6 +805,7 @@ json-server --watch db.json --port 3000
 
 - `--watch db.json` → **JSON dosyasını izle, değişiklikleri algıla**
 - `--port 3000` → **API 3000 portunda çalışsın**
+
 ---
 
 ## **🌍 JSON-Server Kullanımı (API Uç Noktaları)**
@@ -775,7 +821,7 @@ GET http://localhost:3000/posts
 ```json
 [
   { "id": 1, "title": "JSON Server", "content": "Kolay REST API" },
-    { "id": 2, "title": "Node.js", "content": "JavaScript ile backend" }
+  { "id": 2, "title": "Node.js", "content": "JavaScript ile backend" }
 ]
 ```
 
@@ -936,7 +982,6 @@ Bu şekilde, **JSON-Server'ı port 4000 üzerinde çalıştırabilirsiniz.**
 1️⃣ **Frontend Geliştiricileri için API Simülasyonu**  
 2️⃣ **Mobil Uygulama Geliştirme (Mock API Kullanımı)**  
 3️⃣ **Hızlı Prototipleme ve Test Ortamı Kurma**  
-
 4️⃣ **Veri Görselleştirme ve Analiz Amaçlı Geçici API Kurma**  
 5️⃣ **Yapay Zeka ve Makine Öğrenimi İçin Test Verisi Sağlama**
 
@@ -947,6 +992,69 @@ Bu şekilde, **JSON-Server'ı port 4000 üzerinde çalıştırabilirsiniz.**
 ✅ JSON-Server, **hızlı, kolay ve konfigürasyonsuz bir şekilde sahte API oluşturmak için mükemmel bir araçtır**.  
 ✅ **Backend yazmadan** API çağrıları yapabilir, CRUD işlemleri gerçekleştirebilir, filtreleme ve sıralama gibi gelişmiş özellikleri kullanabilirsiniz.  
 ✅ **Frontend geliştiricileri, mobil uygulama geliştiricileri ve test mühendisleri** için **ideal bir çözümdür**. 🚀
+
+## db.json Config
+
+```sh
+
+```
+JSON Server için `db.json` dosyanız sadece `"blogs": []` içeriğine sahip. JSON Server'ı konfigüre etmek için bir `json-server.json` dosyası oluşturabilir veya doğrudan komut satırında parametreler belirtebilirsiniz.
+
+Önerilen yöntem, bir `json-server.json` konfigürasyon dosyası eklemektir:
+
+### 1. **json-server.json Konfigürasyonu**
+Bu dosyayı proje dizinine ekleyin:
+
+```json
+{
+  "port": 5000,
+  "host": "localhost",
+  "delay": 1000,
+  "routes": {
+    "/api/blogs": "/blogs"
+  }
+}
+```
+
+Bu ayarlar:
+- Sunucunun **5000** portunda çalışmasını sağlar.
+- **localhost** üzerinden erişimi sınırlar.
+- API isteklerine **1 saniyelik gecikme (delay)** ekler (test ortamı için faydalıdır).
+- **RESTful route mapping** ile `/api/blogs` isteklerini `/blogs` içine yönlendirir.
+
+### 2. **db.json Güncellemesi**
+Eğer JSON Server için başlangıç verisi eklemek isterseniz, `db.json` dosyanızı şu şekilde genişletebilirsiniz:
+
+```json
+{
+  "blogs": [
+    {
+      "id": 1,
+      "title": "İlk Blog",
+      "content": "Bu bir test blog içeriğidir.",
+      "author": "Yazar Adı"
+    }
+  ]
+}
+```
+
+### 3. **JSON Server’ı Çalıştırma**
+Eğer yukarıdaki `json-server.json` dosyasını oluşturduysanız, aşağıdaki komutla JSON Server'ı başlatabilirsiniz:
+
+```sh
+json-server --watch db.json
+```
+
+Eğer config dosyası olmadan manuel port belirlemek isterseniz:
+
+```sh
+json-server --watch db.json --port 5000
+```
+
+Bu şekilde JSON Server, `db.json` dosyanızdan veri çekerek belirttiğiniz portta çalışır. İhtiyacınıza göre daha fazla ayar ekleyebilirim! 🚀
+
+---
+
 
 ## Babel
 
@@ -963,7 +1071,9 @@ Bu şekilde, **JSON-Server'ı port 4000 üzerinde çalıştırabilirsiniz.**
 - Modern JavaScript (ES6, ES7, ES8 ve sonrası) kodlarını, **ES5 gibi daha eski versiyonlara çevirerek** tüm tarayıcıların desteklemesini sağlar.
 - **ES6+ (ECMAScript 2015 ve sonrası) kodlarını, ES5’e** veya daha önceki JavaScript sürümlerine dönüştürür.
 - **React, TypeScript ve diğer modern JavaScript teknolojileriyle** uyumludur.
-@@ -820,62 +1013,78 @@
+- Tarayıcıların **henüz desteklemediği özellikleri (async/await, arrow functions, classes, optional chaining vs.)** eski tarayıcılar için destekler.
+- **Transpiler (çevirici) olarak çalışır**, yani **JavaScript kodunu alır ve daha eski bir JavaScript sürümüne çevirir**.
+
 ---
 
 # **📌 BABEL NEDEN KULLANILIR?**
@@ -1095,6 +1205,7 @@ Daha sonra **Babel bağımlılıklarını yükleyin**:
 ```sh
 npm install --save-dev @babel/core @babel/cli @babel/preset-env
 ```
+
 | Paket               | Açıklama                            |
 | ------------------- | ----------------------------------- |
 | `@babel/core`       | Babel’in ana paketi                 |
@@ -1146,8 +1257,6 @@ sayHello();
 Böylece **eski tarayıcılarda çalışabilir hale geldi**! 🎉
 
 ---
-
-# **📌 BABEL İLE PLUGİN KULLANIMI**
 
 # **📌 BABEL İLE PLUGİN KULLANIMI**
 
@@ -1223,6 +1332,7 @@ Artık Babel, JSX’i **standart JavaScript’e çevirir** ve tarayıcıda çal�
 ✅ **Babel, modern JavaScript özelliklerini eski tarayıcılarla uyumlu hale getiren güçlü bir çevirici (transpiler)’dir.**  
 ✅ **ES6+, React JSX, TypeScript gibi dilleri destekleyerek tarayıcılarda sorunsuz çalışmasını sağlar.**  
 ✅ **Frontend ve Backend geliştiricileri için kritik bir araçtır ve tüm modern projelerde kullanılır.** 🚀
+
 ## Emmet
 
 ```sh
@@ -1241,39 +1351,47 @@ Aşağıda, sık kullanılan **Emmet Preferences (Ayarları)** listesini bulabil
 {
   // Emmet genişletmesini "Tab" tuşu ile etkinleştirir
   "emmet.triggerExpansionOnTab": true,
-   // HTML ve CSS için otomatik kapanan etiketleri tamamlar
+
+  // HTML ve CSS için otomatik kapanan etiketleri tamamlar
   "emmet.syntaxProfiles": {
     "html": {
       "self_closing_tag": "xhtml"
     }
   },
- // Boş öğelerde otomatik olarak boşluk bırakır
+
+  // Boş öğelerde otomatik olarak boşluk bırakır
   "emmet.preferences": {
     "format.forceIndentationForEmmet": true,
     "format.noIndentTags": "html, body, head",
     "format.selfClosingStyle": "xhtml" // <br />, <img />, vb.
   },
-    // CSS için kısa yazımları destekler
+
+  // CSS için kısa yazımları destekler
   "emmet.showAbbreviationSuggestions": true,
-   // HTML etiketleri için otomatik tamamlama önerileri verir
+
+  // HTML etiketleri için otomatik tamamlama önerileri verir
   "editor.quickSuggestions": {
     "other": true,
     "comments": false,
     "strings": true
   },
-// HTML genişletmelerinde satır sonu otomatik ekler
+
+  // HTML genişletmelerinde satır sonu otomatik ekler
   "emmet.variables": {
     "lang": "en",
     "charset": "UTF-8"
   },
+
   // Emmet ile genişletilmiş HTML kodlarını biçimlendirir
   "editor.formatOnPaste": true,
-// JSX / React gibi ortamlarda Emmet’in çalışmasını sağlar
+
+  // JSX / React gibi ortamlarda Emmet’in çalışmasını sağlar
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
     "typescript": "typescriptreact"
   }
-  ```
+}
+```
 
 ---
 
@@ -1287,6 +1405,7 @@ Aşağıda, sık kullanılan **Emmet Preferences (Ayarları)** listesini bulabil
 Eğer farklı bir özellik eklemek istersen, söyle! 🚀
 
 ## .env
+
 ```sh
 ; PORT
 LOCALHOST_PORT=1111
@@ -1309,18 +1428,23 @@ MONGO_DOCKER_USERNAME=hamitmizrak
 MONGO_DOCKER_PASSWORD=
 MONGO_DOCKER_PORT=27000
 ```
+
 ---
 
 ## .env
+
 ```sh
 
 ```
+
 ---
 
 ## **`.env` Dosyası Nedir?**
+
 `.env` dosyası, **çevresel değişkenleri (environment variables) saklamak için kullanılan** bir dosyadır. Bu dosya, **gizli bilgiler**, **API anahtarları**, **veritabanı bağlantı bilgileri**, **uygulama yapılandırmaları** gibi duyarlı verileri saklamak için yaygın olarak kullanılır.
 
 ### **Neden `.env` Kullanılır?**
+
 1. **Güvenlik** → Duyarlı bilgileri doğrudan kod içine yazmaktan kaçınırsınız.
 2. **Taşınabilirlik** → Farklı ortamlar (geliştirme, test, üretim) için ayrı `.env` dosyaları oluşturabilirsiniz.
 3. **Kolay Yönetim** → Değişkenleri merkezi bir yerde tanımlamak, proje yönetimini kolaylaştırır.
@@ -1329,13 +1453,17 @@ MONGO_DOCKER_PORT=27000
 ---
 
 ## **`.env` Dosyası Nasıl Çalışır?**
+
 `.env` dosyası **anahtar-değer (key-value) çiftleri** formatında yazılır:
+
 ```
 ANAHTAR=DEĞER
 ```
+
 Dosya içinde **yorum satırı** eklemek için `#` karakteri kullanılır.
 
 ### **Örnek `.env` Dosyası:**
+
 ```ini
 # Sunucu yapılandırmaları
 PORT=5000
@@ -1355,19 +1483,23 @@ DEBUG=true
 ---
 
 ## **`.env` Dosyası Kullanımı**
+
 `.env` dosyasındaki değişkenler **uygulama içinde** okunarak kullanılabilir. Aşağıda farklı dillerde `.env` dosyasını nasıl kullanacağınızı gösteriyorum.
 
 ---
 
 ### **1️⃣ Node.js ile `.env` Kullanımı**
+
 Node.js ortamında `.env` dosyasını okumak için **dotenv** paketi kullanılır.
 
 #### **Kurulum:**
+
 ```sh
 npm install dotenv
 ```
 
 #### **Kullanımı (`server.js`):**
+
 ```javascript
 // dotenv paketini yükle
 require("dotenv").config();
@@ -1384,15 +1516,20 @@ console.log(`API Anahtarı: ${apiKey}`);
 
 📌 **Not:** `process.env.PORT`, `.env` dosyasında tanımlanan `PORT` değişkenini alır.
 
+---
+
 ### **2️⃣ Python ile `.env` Kullanımı**
+
 Python’da `.env` dosyasını okumak için **dotenv** paketi kullanılır.
 
 #### **Kurulum:**
+
 ```sh
 pip install python-dotenv
 ```
 
 #### **Kullanımı (`app.py`):**
+
 ```python
 from dotenv import load_dotenv
 import os
@@ -1413,14 +1550,17 @@ print(f"API Anahtarı: {api_key}")
 ---
 
 ### **3️⃣ PHP ile `.env` Kullanımı**
+
 PHP’de `.env` dosyalarını okumak için **vlucas/phpdotenv** paketi kullanılır.
 
 #### **Kurulum:**
+
 ```sh
 composer require vlucas/phpdotenv
 ```
 
 #### **Kullanımı (`config.php`):**
+
 ```php
 <?php
 require 'vendor/autoload.php';
@@ -1436,14 +1576,17 @@ echo "Veritabanı Kullanıcısı: " . $_ENV['DB_USER'];
 ---
 
 ## **`.env` Dosyası İçin En İyi Uygulamalar**
+
 ✅ **`.gitignore` Dosyasına `.env` Ekle:**  
 Hassas bilgileri depoya göndermemek için `.gitignore` içine şu satırı ekleyin:
+
 ```
 .env
 ```
 
 ✅ **`.env.example` Dosyası Kullanın:**  
 Takım arkadaşlarınıza `.env` formatını göstermek için `.env.example` dosyası oluşturabilirsiniz:
+
 ```
 PORT=5000
 DB_HOST=your_db_host
@@ -1455,9 +1598,10 @@ DB_PASS=your_db_password
 
 - `.env.development` → Geliştirme ortamı
 - `.env.production` → Üretim ortamı
-- `.env.test` → Test ortamı 
+- `.env.test` → Test ortamı
 
 Örneğin, **Node.js** projelerinde `dotenv` paketi ile ortam belirtebilirsiniz:
+
 ```javascript
 require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` });
 ```
@@ -1468,6 +1612,7 @@ AWS Secrets Manager, HashiCorp Vault veya Kubernetes Secrets gibi araçlar daha 
 ---
 
 ## **Sonuç**
+
 - **`.env`**, **çevresel değişkenleri** saklamak için kullanılan bir dosyadır.
 - **API anahtarları, veritabanı bilgileri, port numaraları gibi hassas veriler burada saklanır.**
 - **Güvenlik açısından, `.env` dosyası kesinlikle `.gitignore` içine eklenmelidir.**
@@ -1476,8 +1621,8 @@ AWS Secrets Manager, HashiCorp Vault veya Kubernetes Secrets gibi araçlar daha 
 
 🚀 **Özet:** `.env` kullanımı, **uygulamalarınızın yapılandırmasını yönetmeyi daha güvenli ve esnek hale getirir!**
 
-
 ## nodemon.json
+
 ```sh
 {
   "watch": ["src", "dist"],
@@ -1485,11 +1630,12 @@ AWS Secrets Manager, HashiCorp Vault veya Kubernetes Secrets gibi araçlar daha 
   "exec": "node ./dist/server.js"
 }
 ```
+
 ---
 
 ## nodemon.json (Tanım)
 
-```sh
+````sh
 Bu JSON dosyası, genellikle **Nodemon** konfigürasyonu olarak kullanılır (`nodemon.json`). Nodemon, Node.js uygulamalarında dosya değişikliklerini izleyerek otomatik yeniden başlatma sağlayan bir araçtır.
 
 Aşağıda tüm seçenekleri detaylı açıklamalarıyla birlikte inceleyelim:
@@ -1509,7 +1655,7 @@ Aşağıda tüm seçenekleri detaylı açıklamalarıyla birlikte inceleyelim:
   // Yani TypeScript dosyaları derlendikten sonra, `dist` klasöründeki `server.js` çalıştırılacak.
   "exec": "node ./dist/server.js"
 }
-```
+````
 
 ### Açıklamalar:
 
@@ -1525,7 +1671,6 @@ Aşağıda tüm seçenekleri detaylı açıklamalarıyla birlikte inceleyelim:
 
 Bu konfigürasyon, özellikle **Node.js + TypeScript** projelerinde geliştirme sürecini hızlandırmak için oldukça kullanışlıdır.
 
-
 ## bs-config.json
 
 ```sh
@@ -1538,6 +1683,7 @@ Bu konfigürasyon, özellikle **Node.js + TypeScript** projelerinde geliştirme 
   }
 }
 ```
+
 ---
 
 ## bs-config.json
@@ -1559,13 +1705,17 @@ Bu konfigürasyon, özellikle **Node.js + TypeScript** projelerinde geliştirme 
   }
 }
 ```
+
 ---
 
 ## bs-config.json (Detaylı Açıkla)
+
 ```sh
 
 ```
+
 ---
+
 ### **`bs-config.json` Nedir?**
 
 `bs-config.json`, **BrowserSync** için kullanılan bir yapılandırma (konfigürasyon) dosyasıdır. **BrowserSync**, web geliştirme sırasında dosya değişikliklerini izleyen, tarayıcıları otomatik olarak yenileyen ve cihazlar arasında senkronizasyon sağlayan bir araçtır.
@@ -1600,14 +1750,14 @@ Bu dosya, **BrowserSync'in nasıl çalışacağını belirlemek için** kullanı
 
 1. **`"port": 3000`**
 
-   - BrowserSync sunucusunun hangi portta çalışacağını belirler. 
+   - BrowserSync sunucusunun hangi portta çalışacağını belirler.
    - **Örneğin:** `localhost:3000` adresine girerek projeye erişebilirsiniz.
 
-2. **`"files": ["./*.html", "./*.css", "./*.js"]`**  
+2. **`"files": ["./*.html", "./*.css", "./*.js"]`**
 
    - Bu dosyalar **izlenir** ve değişiklik yapıldığında tarayıcı otomatik olarak yenilenir.
    - Burada **tüm HTML, CSS ve JavaScript dosyaları** takip edilmektedir.
-   - **Örnek:** 
+   - **Örnek:**
      - `index.html` veya `about.html` güncellendiğinde tarayıcı yenilenir.
      - `style.css` veya `main.css` değiştirildiğinde tarayıcı yenilenir.
      - `app.js` veya `script.js` değiştirildiğinde tarayıcı yenilenir.
@@ -1619,7 +1769,7 @@ Bu dosya, **BrowserSync'in nasıl çalışacağını belirlemek için** kullanı
    - **Örneğin:** `index.html` dosyanız `./` kök dizininde yer alıyorsa, `localhost:3000` adresine giderek direkt olarak açabilirsiniz.
 
 4. **`"index": "index.html"`**
-   - **Tarayıcı açıldığında otomatik olarak yüklenecek varsayılan dosyadır.** 
+   - **Tarayıcı açıldığında otomatik olarak yüklenecek varsayılan dosyadır.**
    - **Örneğin:** `index.html` olarak ayarlandıysa, `localhost:3000` adresine girildiğinde `index.html` otomatik olarak yüklenir.
 
 ---
@@ -1627,16 +1777,15 @@ Bu dosya, **BrowserSync'in nasıl çalışacağını belirlemek için** kullanı
 ### **Kullanım Senaryosu:**
 
 1. **Otomatik Tarayıcı Yenileme (Live Reloading)**
- 
+
    - HTML, CSS veya JavaScript dosyalarında değişiklik yaptığınızda, tarayıcı otomatik olarak yenilenir.
    - Sayfayı manuel olarak yenilemek zorunda kalmazsınız.
 
-3. **Yerel Geliştirme Sunucusu**
+2. **Yerel Geliştirme Sunucusu**
 
    - Apache veya Node.js gibi ek bir sunucu kurmaya gerek kalmadan, **hızlı bir geliştirme ortamı oluşturur**.
 
-4. **Mobil ve Çoklu Cihaz Senkronizasyonu**
-
+3. **Mobil ve Çoklu Cihaz Senkronizasyonu**
    - Eğer farklı cihazlardan test yapıyorsanız, **bir cihazdaki kaydırma hareketi, tıklamalar ve sayfa değişiklikleri diğer cihazlarda da senkronize edilir**.
 
 ---
@@ -1644,19 +1793,18 @@ Bu dosya, **BrowserSync'in nasıl çalışacağını belirlemek için** kullanı
 ### **Nasıl Kullanılır?**
 
 1. **BrowserSync’i yükleyin** (eğer yüklenmediyse):
-  
+
    ```sh
    npm install -g browser-sync
    ```
 
 2. **BrowserSync’i `bs-config.json` dosyası ile başlatın:**
-  
+
    ```sh
    browser-sync start --config bs-config.json
    ```
 
-3. **Tarayıcınızda şu adrese gidin:**  
-  
+3. **Tarayıcınızda şu adrese gidin:**
    ```
    http://localhost:3000
    ```
@@ -1671,6 +1819,10 @@ Bu dosya, **BrowserSync'in nasıl çalışacağını belirlemek için** kullanı
 
 ---
 
+---
+
+---
+
 ## Node JS Nedir ?
 
 ```sh
@@ -1678,9 +1830,11 @@ NodeJS :
 - Chrome V8 Javascript motorunu kullanan, açık kaynak kodlu,
 - hızlı ve etkili bir platformdur.
 - Normalde javascript web-side olarak çalışıyordu ancak node js ile
+- Normalde JS Browser Side olarak çalışıyordu 
 - Server Side(Server[Sunucu]) tarafından çalışan bir Javascript framework oldu.
 - Ryan Dahl ve Isaac Z. Schluter tarafından 2009 yılında geliştirmeye başlamış.
 ```
+
 ---
 
 ## Node JS Özellikleri
@@ -1699,9 +1853,11 @@ Event-Driven (Olay odaklıdır),Non-Blocking I/O Modeli (Engelsiz Input(Girdi), 
 - Veri tabanı erişimlerinde MongoDB, mysql, postgresql
 - Routing(yönlendirme)
 ```
+
 ---
 
 ## Node JS Olay odaklı(event-driven), engelsiz(non-blocking) I/O Modeli, Event Loop
+
 ```sh
 - Bu model amacı performans metriğini artırmak içindir
 - Olay odaklı programlamada, bir programın olaylar(event) tepki verme şeklidir.
@@ -1712,6 +1868,7 @@ Event-Driven (Olay odaklıdır),Non-Blocking I/O Modeli (Engelsiz Input(Girdi), 
 - Callback function: programalada callback functionlar olay odaklı programlanın bir parçasıdır.
 - Olay odaklı bu model ölçeklenebilinirliliğini sağlar ve eş zamanlı çalışmayı sağlar
 ```
+
 ---
 
 ## Node JS Tarihçesi
@@ -1722,9 +1879,10 @@ Event-Driven (Olay odaklıdır),Non-Blocking I/O Modeli (Engelsiz Input(Girdi), 
 Windows
 LTS(Long Term Support: Uzaun vadeli destek)
 ```
+
 ---
 
-##  Node JS Framework
+## Node JS Framework
 
 ```sh
 - Express.js (En popüler olanı) hafiftir.
@@ -1734,6 +1892,7 @@ LTS(Long Term Support: Uzaun vadeli destek)
 - Sails.js (MVC) mimarisine dayanır.
 - Hapi.js (Büyük ölçekli projeler için uygundur)
 ```
+
 ---
 
 ## Node JS Framework Express
@@ -1750,13 +1909,14 @@ LTS(Long Term Support: Uzaun vadeli destek)
 http://localhost:1111/admin
 http://localhost:1111/blog
 ```
+
 ---
 
-## Winston Nedir
+## winston Nedir
 
 ```sh
-`winston` logger'ı, uygulamanızda hata ve bilgi loglarını düzgün bir şekilde yönetmek için kullanılır. 
-Bu kodu genellikle uygulamanızın **`index.js`** veya **`server.js`** gibi ana giriş dosyasına eklemeniz gerekir. 
+`winston` logger'ı, uygulamanızda hata ve bilgi loglarını düzgün bir şekilde yönetmek için kullanılır.
+Bu kodu genellikle uygulamanızın **`index.js`** veya **`server.js`** gibi ana giriş dosyasına eklemeniz gerekir.
 Logger, uygulamanızın başlangıcından itibaren tüm hataları ve bilgileri loglar.
 
 ### 1. **Kurulum:**
@@ -1770,18 +1930,18 @@ npm install winston
 Npm(Node Package Management): Paket yönetim sistemidir.
 Npm bize hızlı kodlar yazmamız için gereken alt yapıyı sunar.
 ```
+
 ---
 
 ## EJS
 
-```sh
+````sh
 **EJS (Embedded JavaScript)**, Node.js tabanlı uygulamalarda dinamik HTML içerik oluşturmak için kullanılan bir **şablon (template) motoru**dur.
 
 EJS ile, HTML sayfalarının içine JavaScript kodlarını gömerek dinamik içerik üretebilir ve sayfayı istemciye sunabilirsiniz.
 
 ### EJS'in Temel Özellikleri:
-
-1. **JavaScript ile Entegre**: EJS, HTML içine JavaScript kodu gömmeye izin verir. 
+1. **JavaScript ile Entegre**: EJS, HTML içine JavaScript kodu gömmeye izin verir.
 Bu, veritabanından gelen veya başka bir kaynaktan alınan verileri HTML içerisine kolayca entegre etmenizi sağlar.
 
    Örneğin, bir kullanıcı listesini HTML şablonuna eklemek:
@@ -1791,7 +1951,7 @@ Bu, veritabanından gelen veya başka bir kaynaktan alınan verileri HTML içeri
        <li><%= user.name %></li>
      <% }); %>
    </ul>
-```
+````
 
 - `<% %>`: JavaScript kodu çalıştırmak için kullanılır (örneğin, döngüler, koşullu ifadeler).
 
@@ -1861,6 +2021,15 @@ EJS'yi Node.js projenize şu şekilde dahil edebilirsiniz:
    ```ejs
    <h1><%= title %></h1>
    <p>Bu, dinamik olarak oluşturulan bir sayfadır.</p>
+   ```
+
+### EJS Kullanmanın Avantajları:
+
+- **Basit ve Öğrenmesi Kolay**: HTML ile iç içe geçmiş JavaScript kodu, özellikle önceden HTML ve JavaScript bilen geliştiriciler için kullanımı kolaydır.
+
+- **Hafif ve Performanslı**: Fazla ek kütüphanelere ihtiyaç duymadan, doğrudan HTML içine dinamik içerik eklemek mümkün olur.
+
+- **Node.js ile Entegre**: Express.js gibi popüler Node.js çerçeveleriyle mükemmel bir şekilde entegre olabilir.
 
 ## EJS, basit dinamik HTML içerik oluşturma ihtiyacı olan projelerde oldukça kullanışlıdır ve Node.js uygulamalarıyla yaygın bir şekilde kullanılır.
 
@@ -1891,21 +2060,23 @@ Eğer büyük bir projede şablon motoru kullanacaksan, şu seçenekleri değerl
 
 **Sonuç:** Küçük projelerde EJS kullanmak hızlı çözümler sunabilir ama büyük projelerde **React, Vue veya SSR destekli Next.js / Nuxt.js gibi çözümleri** tercih etmek daha mantıklıdır.
 
-
 ## Mongo DB
+
 ```sh
 npm install mongodb
 npm install -g mongodb
 
-username:  
-password:  
+username:  hamitmizrak
+password:  cNrT66n13oQYtkps
 
 mongodb+srv://<your-name>:<your-password>@offlinenodejscluster.l3itd.mongodb.net/?retryWrites=true&w=majority&appName=OfflineNodejsCluster
 ```
+
 ---
 
 ## MongoDB datase (Shelling)
-```sh 
+
+```sh
 # Terminalde
 mongosh veya mongo
 use blogDB  # blogDB adında bir veritabanı oluştur ve ona geç
@@ -1913,12 +2084,13 @@ use blogDB  # blogDB adında bir veritabanı oluştur ve ona geç
 db.posts.insertOne({
     header: "İlk Blog Yazım",
     content: "Bu benim ilk blog yazımın içeriğidir.",
-    author: "Nida Demir",
+    author: "Hamit Mızrak.",
     tags: "java,jsp",
 })
 ```
 
 ## MONGO İÇİN VERİ GÜVENLİĞİ (dotenv)
+
 ```sh
 MongoDB kullanıcı adı ve şifresini doğrudan yazılmaz.
 Hassas verileri saklamak için .env dosyası üzerinden ilerlemeliyiz.
@@ -1937,10 +2109,11 @@ require('dotenv').config();
 const databaseCloudUrlDotEnv =
 `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@offlinenodejscluster.l3itd.mongodb.net/?retryWrites=true&w=majority&appName=OfflineNodejsCluster`;
 ```
+
 ---
 
-
 ## Morgan Log
+
 ```sh
 npm install morgan
 npm install -g morgan
@@ -1956,7 +2129,7 @@ Bu loglar sayesinde, isteklerin durumu, yanıt kodları, yanıt süreleri gibi b
 
 2. **Log Formatları**: Morgan, isteklere ait bilgileri çeşitli formatlarda loglayabilir (`combined`, `dev`, `short`, `common` gibi).
 
-3. **Geliştirme ve Üretim Ortamlarında Kullanım**: `dev` gibi kısa ve öz log formatları, geliştirme sırasında hızlı bilgi sağlar. 
+3. **Geliştirme ve Üretim Ortamlarında Kullanım**: `dev` gibi kısa ve öz log formatları, geliştirme sırasında hızlı bilgi sağlar.
 `combined` gibi daha ayrıntılı formatlar ise üretim ortamında detaylı takip için uygundur.
 
 4. **Logların Dosyaya Yazdırılması**: Morgan logları, konsol yerine bir dosyaya yönlendirilebilir, böylece uygulamanın işlem geçmişi saklanabilir.
@@ -1972,6 +2145,7 @@ Bu loglar sayesinde, isteklerin durumu, yanıt kodları, yanıt süreleri gibi b
 ```
 
 ### Örnek Kullanım:
+
 ```sh
 const express = require('express');
 const morgan = require('morgan');
@@ -1999,14 +2173,18 @@ Bu kod ile gelen her istek, Morgan tarafından loglanır ve geliştiriciye daha 
 
 Morgan, Express.js gibi popüler Node.js çerçeveleri ile loglama işlemlerini basit ve verimli hale getirir.
 ```
+
 ---
 
 ### Winston
+
 ### 1. **Install**
+
 npm install winston
 
 ### 2. **index.js veya server.js Dosyasına Ekleme:**
-Logger kodunu projenizin başlangıç dosyasına ekleyin. Genellikle bu dosya `index.js` veya `server.js` olur. 
+
+Logger kodunu projenizin başlangıç dosyasına ekleyin. Genellikle bu dosya `index.js` veya `server.js` olur.
 Aşağıdaki örnekte, `winston` logger kodu, `index.js` dosyasına eklenmiştir:
 
 ```javascript => index.js
@@ -2060,24 +2238,28 @@ app.listen(port, () => {
 ```
 
 ### 3. **Winston Logger'ın Kullanımı:**
-Yukarıdaki kodda `logger.info()` ve `logger.error()` kullanarak bilgi ve hata loglarını yönetebilirsiniz. 
+
+Yukarıdaki kodda `logger.info()` ve `logger.error()` kullanarak bilgi ve hata loglarını yönetebilirsiniz.
 Örneğin:
+
 - `logger.info("Sunucu başlatıldı")`: Bilgi mesajlarını loglar.
 - `logger.error("Bir hata oluştu")`: Hata mesajlarını loglar.
-Bu loglar:
+  Bu loglar:
 - `error.log`: Sadece hata seviyesindeki logları içerir.
 - `combined.log`: Tüm logları içerir.
 
 ### 4. **Log Dosyalarını Kontrol Etme:**
+
 ```sh
 - `error.log` ve `combined.log` dosyaları, çalıştırdığınız dizinde otomatik olarak oluşturulur.
 - Uygulamanız çalışırken bu dosyalara logların yazıldığını göreceksiniz.
 
 Logger'ı hatalar, bilgi mesajları veya özel olaylar için kullanabilirsiniz.
 ```
+
 ---
 
-## compression (sıkıştırma)
+## compression (Sıkıştırma)
 
 ```sh
 compression:
@@ -2089,6 +2271,7 @@ Tüm Http cevaplarını sıkıştırarak gönderilmesini sağlar.
 const compression = require('compression');
 app.use(compression);
 ```
+
 ---
 
 ## HELMET (Syber Security Saldırılara karşın)
@@ -2121,6 +2304,7 @@ const limiter = rateLimit({
 
 app.use("/api/", limiter)
 ```
+
 ---
 
 ## CORS
@@ -2134,9 +2318,11 @@ Eğer API'niz başka portlardan da erişim sağlanacaksa bunu açmamız gerekiyo
 const cors= require('cors');
 app.use(cors());
 ```
+
 ---
 
 ## CSRF Koruması (Cross-Site Request Forgery)
+
 ```sh
 npm install csurf
 const csrf = require("csurf");
@@ -2149,6 +2335,7 @@ app.get("/form", csrfProtection, (req, res) => {
   res.render("send", { csrfToken: req.csrfToken() });
 });
 ```
+
 ---
 
 ## Swagger (API Document)
@@ -2343,10 +2530,13 @@ const swaggerDocs = swaggerJsDoc(swaggerOptions);
 // http://localhost:1111/api-docs
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 ```
+
 ---
 
 ## Konu
 
 ```sh
+
 ```
+
 ---
