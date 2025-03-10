@@ -1,7 +1,7 @@
 {
   "name": "2025_techcareer_frontend_fullstack_2",
   "version": "1.0.0",
-  "description":"[Github Linki](https://github.com/nidademir/2025_techcareer_frontend_fullstack_2.git)",
+  "description": "[Github Linki](https://github.com/nidademir/2025_techcareer_frontend_fullstack_2.git)",
   "main": "./dist/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
