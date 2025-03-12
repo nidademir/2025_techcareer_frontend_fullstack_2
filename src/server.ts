@@ -377,83 +377,47 @@ app.use(express.static(path.join(__dirname, "../public")));
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // ROUTER (Index.html Anasayfa)
+// 📌 Ana Sayfa (`index.html`) Yönlendirmesi
 // http://localhost:1111/
 
-// 📌 Ana Sayfa (`index.html`) Yönlendirmesi
- // response.sendFile => Static HTML dosyasını istemciye gönderirir.
 // app.get("/", (request: any, response: any) => {
- //   response.sendFile(path.join(__dirname, "views", "index"));
+ //   response.sendFile(path.join(__dirname, "public", "index.html"));
  // });
-
- // 📌 Ana Sayfa EJS (`views/index.ejs`) 
- // response.render => Dinamik HTML dosyasını EJS(şablonu motoru) dinamik içeriği istemciye gönderirir.
- app.get("/", (request: any, response: any) => {
-  response.render("index", {
-    title: "😊 Full Stack Frontend Node.js Öğreniyorum-2",
-    message: "Bu bir EJS sayfasıdır",
-    blogPosts: blogPosts,
-  });
-});
-
-// blogPosts
-const blogPosts: any = [
+ 
+ // EJS için 
+ // app.get("/", (request: any, response: any) => {
+ //    response.render("index")
+ // });
+ 
+ // Blog post örnek verileri (normalde veritabanından alınır)
+ const blogPosts = [
   {
     id: 1,
-    title: "Blog Post 1",
-    content: "Bu bir blog postudur",
-    //image: "https://via.placeholder.com/150"
+    title: "Node.js ile Web Geliştirme",
+    content: "Node.js ile backend geliştirme nasıl yapılır?",
     image: "/images/kart5.jpg",
-    date: new Date().getFullYear(),
   },
   {
     id: 2,
-    title: "Blog Post 2",
-    content: "Bu bir blog postudur",
-    //image: "https://via.placeholder.com/150"
+    title: "Express.js Framework’ü",
+    content: "Express.js ile nasıl API oluşturulur?",
     image: "/images/kart5.jpg",
-    date: new Date().getFullYear(),
   },
   {
     id: 3,
-    title: "Blog Post 3",
-    content: "Bu bir blog postudur",
-    //image: "https://via.placeholder.com/150"
+    title: "MongoDB ile Veri Saklama",
+    content: "MongoDB kullanarak veri nasıl saklanır?",
     image: "/images/kart5.jpg",
-    date: new Date().getFullYear(),
   },
-  {
-    id: 4,
-    title: "Blog Post 4",
-    content: "Bu bir blog postudur",
-    //image: "https://via.placeholder.com/150"
-    image: "/images/kart5.jpg",
-    date: new Date().getFullYear(),
-  },
-  {
-    id: 5,
-    title: "Blog Post 5",
-    content: "Bu bir blog postudur",
-    //image: "https://via.placeholder.com/150"
-    image: "/images/kart5.jpg",
-    date: new Date().getFullYear(),
-  },
-  {
-    id: 6,
-    title: "Blog Post 6",
-    content: "Bu bir blog postudur",
-    //image: "https://via.placeholder.com/150"
-    image: "/images/kart5.jpg",
-    date: new Date().getFullYear(),
-  },
-  {
-    id: 7,
-    title: "Blog Post 7",
-    content: "Bu bir blog postudur",
-    //image: "https://via.placeholder.com/150"
-    image: "/images/kart5.jpg",
-    date: new Date().getFullYear(),
-  }
 ];
+
+// Anasayfa route'u: index.ejs'yi render eder
+app.get("/", (request: any, response: any) => {
+  response.render("index", {
+    title: "Blog Sayfası",
+    blogPosts: blogPosts, // blogPosts değişkenini EJS şablonuna gönderiyoruz
+  });
+});
  
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // ROUTER (Blog.ejs Sayfası)
