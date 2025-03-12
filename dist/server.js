@@ -315,9 +315,11 @@ app.use(express.static(path.join(__dirname, "../public")));
 // ROUTER (Index.html Anasayfa)
 // 📌 Ana Sayfa (`index.html`) Yönlendirmesi
 // http://localhost:1111/
-app.get("/", (request, response) => {
-    response.sendFile(path.join(__dirname, "public", "index.html"));
-});
+// app.get("/", (request: any, response: any) => {
+ //   response.sendFile(path.join(__dirname, "views", "index"));
+ // });
+ // 📌 Ana Sayfa veya (`views/index.ejs`) 
+ // http://localhost:1111/
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // ROUTER (Blog.ejs Sayfası)
 // GET ROUTER (Blog Sayfası)
