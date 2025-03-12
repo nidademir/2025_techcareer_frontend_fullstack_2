@@ -33,12 +33,23 @@
 
     <!-- External css -->
     <!-- NOT: `/css/styles.css` için  public dizininde olması gerekiyor -->
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/index.css" />
   </head>
 
   <body class="container">
     <!-- start codes -->
 
+          <!-- Navbar First -->
+      <%- include('partials/navbar_first') %>
+
+      <!-- Navbar Second -->
+      <%- include('partials/navbar_second') %>
+
+
+       <!-- Main -->
+      <!-- main start -->
+      <main id="main">
+      
     <p><%= csrfToken %></p>
 
 <!-- form#blog-form[action="/blog" method="get" name="blog-form"]>\n
@@ -62,7 +73,7 @@ input#header.form-control[type="text" name="header" placeholder="blog başlığ�
         class="form-control" 
         id="header" 
         name="header"
-        placeholder="blog başlığı " 
+        placeholder="blog başlığı" 
         title="blog başlığı"
         autofocus
         />
@@ -145,6 +156,14 @@ input#header.form-control[type="text" name="header" placeholder="blog başlığ�
     
 
     <a class="btn btn-primary" href="/">Anasayfa'ya Git</a>
+
+
+    
+      </main>
+      <!-- main end -->
+
+      <!-- Footer -->
+      <%- include('partials/footer') %>
 
     <!-- end codes -->
     <!-- Bootstrap JavaScript Libraries -->
