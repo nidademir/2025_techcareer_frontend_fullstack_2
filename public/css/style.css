@@ -1,0 +1,96 @@
+/* Genel Sayfa Stili */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ana Konteyner */
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Başlık */
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Giriş Alanı ve Buton */
+input[type="text"] {
+    width: 70%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Görev Listesi */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Görev Tamamlandıysa Üstü Çizilsin */
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* Düzenleme ve Silme Butonları */
+button.editTask {
+    background-color: #ffc107;
+}
+
+button.editTask:hover {
+    background-color: #e0a800;
+}
+
+button.deleteTask {
+    background-color: #dc3545;
+}
+
+button.deleteTask:hover {
+    background-color: #c82333;
+}
+
+/* Temizleme Butonları */
+#clearCompleted, #clearAll {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #28a745;
+}
+
+#clearCompleted:hover, #clearAll:hover {
+    background-color: #218838;
+}
