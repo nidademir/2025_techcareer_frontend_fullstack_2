@@ -330,6 +330,10 @@ const limiter = rateLimit({
 app.use("/blog/api", limiter);
 
 // Yeni sayfa,özellikleri örneğin todo buraya ekleyebilirsiniz.
+const todoRoutes = require("./routers/todo_router");
+app.use("/todo", todoRoutes);
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // CORS

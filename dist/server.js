@@ -214,7 +214,7 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "../views"));
 // Static Dosyalar (CSS,JS)
 // app.use(express.static(path.join(__dirname, "public")));
-// app.use(express.static("public"));
+app.use(express.static("public"));
 app.use(express.static(path.join(__dirname, "../public")));
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Middleware
@@ -222,7 +222,7 @@ app.use(express.static(path.join(__dirname, "../public")));
 // Middleware fonksiyonları, gelen isteği kontrol edebilir, işleyebilir ve yanıt verebilir.
 // Middleware fonksiyonları, istek ve yanıt nesnelerine erişebilir ve isteği değiştirebilir.
 // Middleware'leri dahil et
-// app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 // Express.js uygulamalarındaki middleware'dir. Gelen isteklerin body(gövde) kısmını analiz ederek, form verilerini ve JSON verilerine erişebilir hale getirir.
 // urlencoded: Burada gelen istek gövdelerini URL'ye kodlanmıi form verilerini işlemeye yarar.
 // extended: true: Gelen veriler içim querystring(qs) adlı kütaphane kullanılır. Ve bunun sayesinde karmaşık nesleride ayrıştırabilir.
@@ -404,6 +404,11 @@ app.post("/blog", csrfProtection, (request, response) => {
 //  response.render("blog", { csrfToken: response.locals.csrfToken });
 //});
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+const todo_router = require("../routers/todo_router");
+app.use("/todo", todo_router);
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 // ROUTER (Todo.ejs Sayfası)
 // GET ROUTER (Todo Sayfası)
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
