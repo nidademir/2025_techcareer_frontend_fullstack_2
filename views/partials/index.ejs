@@ -4,7 +4,7 @@
    <html lang="en">
      <head>
        <!-- title -->
-       <title>😊Full Stack Frontend Node.js Öğreniyorum-2</title>
+       <title><%=title%></title>
  
        <!-- favicon -->
        <link rel="stylesheet" href="pictures/favicon.jpg" />
@@ -86,14 +86,20 @@
        <noscript>Bu web sitesi javascript'i desteklenmiyor</noscript>
        <!-- Start Codes -->
  
-       
+       <!-- Navbar First -->
+       <%- include('partials/navbar_first') %>
+
+        <!-- Navbar Second -->
+       <%- include('partials/navbar_second') %>
+
+       <!-- Header -->
+       <%- include('partials/header') %>
+
+         <!-- Main -->
+         <%- include('partials/main') %>
  
-    
-     
- 
-      
- 
-      
+         <!-- Footer -->
+          <%- include('partials/footer') %>
  
        <!-- end codes -->
        <script

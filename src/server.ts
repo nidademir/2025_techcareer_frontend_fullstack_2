@@ -27,6 +27,7 @@ const mongoose = require("mongoose");
 
 // dotenv (Çevresel değişkenleri .env dosyasından almayı sağlar)
 import dotenv from "dotenv";
+import { title } from "process";
 dotenv.config(); // .env dosyasındaki değişkenleri process.env içine yükler
 
 // CSRF (Cross-Site Request Forgery saldırılarına karşı koruma sağlar)
@@ -376,12 +377,27 @@ app.use(express.static(path.join(__dirname, "../public")));
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // ROUTER (Index.html Anasayfa)
-// 📌 Ana Sayfa (`index.html`) Yönlendirmesi
 // http://localhost:1111/
+
+// 📌 Ana Sayfa (`index.html`) Yönlendirmesi
+ // response.sendFile => Static HTML dosyasını istemciye gönderirir.
 // app.get("/", (request: any, response: any) => {
  //   response.sendFile(path.join(__dirname, "views", "index"));
  // });
 
+ // 📌 Ana Sayfa EJS (`views/index.ejs`) 
+ // response.render => Dinamik HTML dosyasını EJS(şablonu motoru) dinamik içeriği istemciye gönderirir.
+ app.get("/", (request: any, response: any) => {
+  response.render("index", {
+    title: "😊 Full Stack Frontend Node.js Öğreniyorum-2",
+    message: "Bu bir EJS sayfasıdır",
+    blogPosts: blogPosts,
+  });
+});
+
+// blogPosts
+const blogPosts:any =[];
+ 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // ROUTER (Blog.ejs Sayfası)
 // GET ROUTER (Blog Sayfası)
@@ -508,7 +524,7 @@ app.use("/blog/api", blogRouter);
 
 app.use((request: any, response: any, next: any) => {
   // render("ErrorPage404") ==>  views/ErrorPage404.ejs
-  response.status(404).render("ErrorPage404", { url: request.originalUrl });
+  response.status(404).render("errorPage404", { url: request.originalUrl });
 });
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
