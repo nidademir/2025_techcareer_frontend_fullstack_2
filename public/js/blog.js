@@ -212,18 +212,16 @@ $(document).ready(function () {
         const $tbody = $("#blog-table tbody").empty();
         data.forEach((item) => {
           $tbody.append(`
-            <tr data-id="${item._id}">
-              <td>${item._id}</td>
+            <tr data-id="${item.id}">
+              <td>${item.id}</td>
               <td>${item.header}</td>
               <td>${item.content}</td>
               <td>${item.author}</td>
               <td>${item.tags}</td>
-              <td>${item.views}</td>
-              <td>${item.status}</td>
               <td>${item.dateInformation}</td>
               <td>
-                <button class="btn btn-warning btn-sm edit-btn" data-id="${blog._id}">Düzenle</button>
-                <button class="btn btn-danger btn-sm delete-btn" data-id="${blog._id}">Sil</button>
+                <button class="btn btn-warning btn-sm edit-btn" data-id="${blog.id}">Düzenle</button>
+                <button class="btn btn-danger btn-sm delete-btn" data-id="${blog.id}">Sil</button>
               </td>
             </tr>
           `); //end append
