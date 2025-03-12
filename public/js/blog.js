@@ -1,6 +1,8 @@
+const { error } = require("console");
+
 $(document).ready(function () {
   // Field
-  let isUpdating = false;
+  let isUpdating = false; //hem ekleme hemde güncelleme işlemi yapmak için
   let updateId = null;
   const maxCharacters = 2000; // Blog Content Max Characters
 
@@ -16,7 +18,7 @@ $(document).ready(function () {
   const showError = (element, message) => {
     $(element).next(".error-message, .valid-message").remove();
     $(element).after(
-      `<small class="text-warning error-message">${message}</small>`
+      `<small class="text-danger error-message">${message}</small>`
     );
   };
 
@@ -68,7 +70,8 @@ $(document).ready(function () {
     const tags = $("#tags").val().trim(); // Blog Formunda ki tags(Etiket) alanını al
 
     // HEADER
-    if (header === "") {
+    //if (header === "") {
+    if (!header) {
       showError("#header", "Başlık alanı boş bırakılamaz.");
       isValid = false;
     } else {
@@ -76,7 +79,7 @@ $(document).ready(function () {
     }
 
     // CONTENT
-    if (content === "") {
+    if (!content) {
       showError("#content", "İçerik alanı boş bırakılamaz.");
       isValid = false;
     } else if (charCount > maxCharacters) {
@@ -87,7 +90,7 @@ $(document).ready(function () {
     }
 
     // AUTHOR
-    if (author === "") {
+    if (!author) {
       showError("#author", "Yazar alanı boş bırakılamaz.");
       isValid = false;
     } else {
@@ -139,10 +142,11 @@ $(document).ready(function () {
 
   /////////////////////////////////////////////////////////////////////////////////
   // CRUD
-  // Blog Ekleme/Update
+  // Blog CREATE OR UPDATE
   $("#blog-form").on("submit", function (event) {
     // Browser sen dur ben biliyorum ne yapacağımı
     event.preventDefault();
+
     // Form Doğrulama
     if (!validateForm()) {
       return;
@@ -157,52 +161,52 @@ $(document).ready(function () {
       _csrf: $("input[name='_csrf']").val(),
     };
 
-    // Update
-    if (isUpdating && updateId) {
-      $.ajax({
-        url: `/blog/api/${updateId}`,
-        method: "PUT",
-        data: blogData,
-        success: function (data) {
-          console.log("Güncelleme işlemi başarılı", data);
-          fetchBlogList();
-          resetForm();
-        },
-        error: handleError,
-      });
-    } else {
-      // Create
-      $.ajax({
-        url: "/blog/api/",
-        method: "POST",
-        data: blogData,
-        success: function (data) {
-          console.log("Blog Ekleme işlemi başarılı", data);
-          fetchBlogList();
-          resetForm();
-        },
-        error: handleError,
-      });
-    } //end else
+    const ajaxOptions = {
+      // isUpdating true ise güncelleme değilse ekleme işlemi yap
+      url: isUpdating ? `/blog/api/${updateId}` : "/blog/api/",
+      method: isUpdating ? "PUT" : "POST",
+      data: blogData,
+      success: function (data) {
+        console.log("işlemi başarılı", data);
+        fetchBlogList();
+        resetForm();
+      },
+      error: function (xhr, status, error) {
+        handleError(xhr, status, error);
+        console.error("işlem başarısız", error);
+      },
+    };
+
+    // Ajax aktifleştirmek
+    $.ajax(ajaxOptions);
   }); //end Blog Ekleme
 
+  /////////////////
+  // EDIT
   // Html tablosundaki ("#blog-table tbody") satırı Düzenle butonuna tıkladığımızda
   // Formu doldursun
   $("#blog-table tbody").on("click", ".edit-btn", function () {
     const row = $(this).closest("tr");
-    const id = row.data("id");
+    updateId = row.data("id");
+
+    if (!isUpdating) {
+      window.alert("Düzenlenecek Blog Bulunamadı!");
+      return;
+    }
+
     $("#header").val(row.find("td:eq(1)").text());
     $("#content").val(row.find("td:eq(2)").text());
     $("#author").val(row.find("td:eq(3)").text());
     $("#tags").val(row.find("td:eq(4)").text());
 
-    isUpdating = true;
     // 1.YOL
-    updateId = id;
+    isUpdating = true;
     // 2.YOL (Local Storage)
     $("#submit-btn").text("Güncelle");
   });
 
+  /////////////////
+  // LIST
   // Blog List
   const fetchBlogList = () => {
     $.ajax({
@@ -218,7 +222,7 @@ $(document).ready(function () {
               <td>${item.content}</td>
               <td>${item.author}</td>
               <td>${item.tags}</td>
-              <td>${item.dateInformation}</td>
+              <td>${item.createdAt}</td>
               <td>
                 <button class="btn btn-warning btn-sm edit-btn" data-id="${blog.id}">Düzenle</button>
                 <button class="btn btn-danger btn-sm delete-btn" data-id="${blog.id}">Sil</button>
@@ -227,18 +231,31 @@ $(document).ready(function () {
           `); //end append
         }); // end forEach
       },
-      error: handleError,
+      error: function (xhr, status, error) {
+        handleError(xhr, status, error);
+        console.error("işlem başarısız", error);
+      },
     });
   }; // end fetchBlogList
 
+  /////////////////
   // Blog Bulma
-  
+
+  /////////////////
   // Blog Silme
   $("#blog-table tbody").on("click", ".delete-btn", function () {
     const deleteId = $(this).closest("tr").data("id");
-    if (!confirm(`${deleteId} numaralı ID Silmek istediğinizden emin misiniz?`)) 
+
+    // Silme işlemi yapmadan önce kullanıcıya uyarı ver
+    if (!deleteId) {
+      alert("Silmek istediğiniz blog bulunamadı!");
       return;
-    
+    }
+
+    // Silme işlemi yapmadan önce kullanıcıya uyarı ver
+    if (!confirm(`${deleteId} numaralı ID Silmek istediğinizden emin misiniz?`))
+      return;
+
     $.ajax({
       url: `/blog/api/${deleteId}`,
       method: "DELETE",
@@ -247,10 +264,14 @@ $(document).ready(function () {
         console.log("Silme işlemi başarılı", data);
         fetchBlogList();
       },
-      error: handleError,
+      error: function (xhr, status, error) {
+        handleError(xhr, status, error);
+        console.error("Silme işlemi başarısız", error);
+      },
     }); //end ajax
   }); //end confirm
 
+  /////////////////
   fetchBlogList();
   updateCharCount(); //Başlangıçta karakter sayısını güncelle
 }); // end document.ready
