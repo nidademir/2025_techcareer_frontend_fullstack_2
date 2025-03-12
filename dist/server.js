@@ -324,9 +324,65 @@ app.get("/", (request, response) => {
         });
 });
 // blogPosts
-const blogPosts = [];
- // 📌 Ana Sayfa EJS (`views/index.ejs`) 
- // response.render => Dinamik HTML dosyasını EJS(şablonu motoru) dinamik içeriği istemciye gönderirir.
+const blogPosts = [
+    {
+        id: 1,
+        title: "Blog Post 1",
+        content: "Bu bir blog postudur",
+        //image: "https://via.placeholder.com/150"
+        image: "/images/kart5.jpg",
+        date: new Date().getFullYear(),
+    },
+    {
+        id: 2,
+        title: "Blog Post 2",
+        content: "Bu bir blog postudur",
+        //image: "https://via.placeholder.com/150"
+        image: "/images/kart5.jpg",
+        date: new Date().getFullYear(),
+    },
+    {
+        id: 3,
+        title: "Blog Post 3",
+        content: "Bu bir blog postudur",
+        //image: "https://via.placeholder.com/150"
+        image: "/images/kart5.jpg",
+        date: new Date().getFullYear(),
+    },
+    {
+        id: 4,
+        title: "Blog Post 4",
+        content: "Bu bir blog postudur",
+        //image: "https://via.placeholder.com/150"
+        image: "/images/kart5.jpg",
+        date: new Date().getFullYear(),
+    },
+    {
+        id: 5,
+        title: "Blog Post 5",
+        content: "Bu bir blog postudur",
+        //image: "https://via.placeholder.com/150"
+        image: "/images/kart5.jpg",
+        date: new Date().getFullYear(),
+    },
+    {
+        id: 6,
+        title: "Blog Post 6",
+        content: "Bu bir blog postudur",
+        //image: "https://via.placeholder.com/150"
+        image: "/images/kart5.jpg",
+        date: new Date().getFullYear(),
+    },
+    {
+        id: 7,
+        title: "Blog Post 7",
+        content: "Bu bir blog postudur",
+        //image: "https://via.placeholder.com/150"
+        image: "/images/kart5.jpg",
+        date: new Date().getFullYear(),
+    }
+];
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // ROUTER (Blog.ejs Sayfası)
 // GET ROUTER (Blog Sayfası)

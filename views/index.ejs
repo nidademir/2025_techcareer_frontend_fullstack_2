@@ -5,12 +5,10 @@
 
 <head>
   <!-- title -->
-  <title>
-    <%=title%>
-  </title>
+  <title><%= typeof title !=='undefined' ? title: 'Anasayfa'%></title>
 
   <!-- favicon -->
-  <link rel="stylesheet" href="pictures/favicon.jpg" />
+  <link rel="stylesheet" href="../public/images/favicon.jpg" />
 
   <!-- for language -->
   <meta charset="utf-8" />

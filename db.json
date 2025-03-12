@@ -1,4 +1,14 @@
 {
-  "blogs": [],
+  "blogs": [
+    {
+      "id": 1,
+      "header": "header",
+      "content": "content",
+      "author": "yazar",
+      "tags": "tags",
+      "createdAt": "2025-03-11T23:26:20.550Z",
+      "_csrf":"XXKZ0R-IMQsdfs9akv-KP7815515151"
+     }
+    ],
   "tasks": []
 }
