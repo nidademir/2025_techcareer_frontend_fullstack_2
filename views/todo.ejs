@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    
+    <!-- CSS Bağlantısı -->
+    <link rel="stylesheet" href="/css/style.css"> 
+    
+    <!-- jQuery Kütüphanesi -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script> 
+</head>
+<body>
+
+    <div class="container">
+        <h2>To-Do List</h2>
+
+        <input type="text" id="taskInput" placeholder="Yeni görev ekle">
+        <button id="addTaskBtn">Ekle</button>
+
+        <ul id="taskList">
+            <% tasks.forEach(task => { %>
+                <li data-id="<%= task.id %>">
+                    <input type="checkbox" class="completeTask" <% if (task.completed) { %>checked<% } %> >
+                    <span class="<%= task.completed ? 'completed' : '' %>"><%= task.text %></span>
+                    <button class="editTask">✏️</button>
+                    <button class="deleteTask">🗑️</button>
+                </li>
+            <% }) %>
+        </ul>
+
+        <button id="clearCompleted">✅ Yapılan Görevleri Sil</button>
+        <button id="clearAll">🗑️ Tüm Görevleri Sil</button>
+    </div>
+
+    <!-- JS Dosyanı Bağla -->
+    <script src="/js/todo.js" defer></script>
+</body>
+</html>
+
