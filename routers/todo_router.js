@@ -18,13 +18,13 @@ function writeDB(data) {
 }
 
 // 📌 To-Do List sayfasını aç
-router.get("/", (req, res) => {
+router.get("/todo", (req, res) => {
     const data = readDB();
-    res.render("todo", { tasks: data.tasks });
+    res.render("tasks", { tasks: data.tasks });
 });
 
 // 📌 Yeni görev ekleme
-router.post("/tasks", (req, res) => {
+router.post("/todo", (req, res) => {
     if (!req.body.text) {
         return res.status(400).json({ error: "Görev metni gereklidir." });
     }
@@ -42,7 +42,7 @@ router.post("/tasks", (req, res) => {
 });
 
 // 📌 Görev güncelleme (tamamlama veya metni değiştirme)
-router.put("/tasks/:id", (req, res) => {
+router.put("/todo/:id", (req, res) => {
     const data = readDB();
     const task = data.tasks.find(t => t.id === Number(req.params.id));
 
@@ -58,7 +58,7 @@ router.put("/tasks/:id", (req, res) => {
 });
 
 // 📌 Görev silme
-router.delete("/tasks/:id", (req, res) => {
+router.delete("/todo/:id", (req, res) => {
     let data = readDB();
     const initialLength = data.tasks.length;
     data.tasks = data.tasks.filter(t => t.id !== Number(req.params.id));
@@ -72,7 +72,7 @@ router.delete("/tasks/:id", (req, res) => {
 });
 
 // 📌 Yapılan görevleri temizleme
-router.delete("/tasks/clear-completed", (req, res) => {
+router.delete("/todo/clear-completed", (req, res) => {
     let data = readDB();
     data.tasks = data.tasks.filter(t => !t.completed);
     writeDB(data);
@@ -80,7 +80,7 @@ router.delete("/tasks/clear-completed", (req, res) => {
 });
 
 // 📌 Tüm görevleri temizleme
-router.delete("/tasks", (req, res) => {
+router.delete("/todo", (req, res) => {
     writeDB({ tasks: [] });
     res.status(200).json({ message: "Tüm görevler silindi." });
 });
